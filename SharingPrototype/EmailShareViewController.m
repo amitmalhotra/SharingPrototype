@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 TrackVia. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "EmailShareViewController.h"
 
-@interface ViewController ()
+@interface EmailShareViewController ()
 
 @end
 
-@implementation ViewController
+@implementation EmailShareViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
