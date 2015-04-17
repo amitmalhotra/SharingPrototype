@@ -7,8 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "THContactPickerView.h"
 
-@interface EmailShareViewController : UIViewController
+@interface EmailShareViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic, strong) IBOutlet UIScrollView* scrollView;
+@property (nonatomic, strong) IBOutlet THContactPickerView* contactPickerView;
+@property (nonatomic, strong) UITableView *tableView;
+
 
 
 @end

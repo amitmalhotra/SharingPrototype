@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>AA1C6DD7-B00F-4A98-BC98-B4201EF26B4E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SharingPrototype</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>1FFD260D276ECD8E3A750589F805CAB37A8672DF</key>
+		<string>https://github.com/amitmalhotra/SharingPrototype.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SharingPrototype.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>1FFD260D276ECD8E3A750589F805CAB37A8672DF</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/amitmalhotra/SharingPrototype.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>1FFD260D276ECD8E3A750589F805CAB37A8672DF</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>1FFD260D276ECD8E3A750589F805CAB37A8672DF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SharingPrototype</string>
+		</dict>
+	</array>
+</dict>
+</plist>
