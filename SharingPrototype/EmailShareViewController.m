@@ -9,16 +9,16 @@
 #import "EmailShareViewController.h"
 #import "APAddressBook.h"
 #import "APContact.h"
+#import "EmailContactItem.h"
 
 
 @interface EmailShareViewController () <THContactPickerDelegate>
 
 @property (nonatomic, strong) NSArray *contacts;
-@property (nonatomic, strong) NSArray *contactEmails;
-
-@property (nonatomic, readonly) NSArray *selectedContacts;
+@property (nonatomic, strong) NSMutableArray *privateSelectedContacts;
+@property (nonatomic, strong) NSArray *filteredContacts;
 @property (nonatomic) NSInteger selectedCount;
-@property (nonatomic, readonly) NSArray *filteredEmailContacts;
+@property (nonatomic, assign) BOOL contactsAreDisplayed;
 
 - (NSPredicate *)newFilteringPredicateWithText:(NSString *) text;
 - (void) didChangeSelectedItems;
@@ -27,6 +27,26 @@
 @end
 
 @implementation EmailShareViewController
+
+NSString *EmailShareViewCellReuseID = @"EmailShareViewCell";
+
+#pragma mark - Public properties
+
+- (NSArray *)filteredContacts {
+    if (!_filteredContacts) {
+        _filteredContacts = _contacts;
+    }
+    return _filteredContacts;
+}
+
+#pragma mark - Private properties
+
+- (NSMutableArray *)privateSelectedContacts {
+    if (!_privateSelectedContacts) {
+        _privateSelectedContacts = [NSMutableArray array];
+    }
+    return _privateSelectedContacts;
+}
 
 
 #pragma mark - View Lifecycle methods
@@ -49,7 +69,7 @@
     self.tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    [self.view insertSubview:self.tableView belowSubview:self.contactPickerView];
+    self.contactsAreDisplayed = false;
     
     [self populateContacts];
     
@@ -119,8 +139,7 @@
                  }
                      break;
              }
-             
-             weakSelf.contacts = contacts;
+             weakSelf.contacts = [weakSelf flattenEmailContacts:contacts];
              [weakSelf.tableView reloadData];
          }
          else
@@ -130,8 +149,22 @@
      }];
 
     
+}
+
+- (NSArray *) flattenEmailContacts:(NSArray *) contacts
+{
+    NSMutableArray *flattenedContacts = [[NSMutableArray alloc] init];
+    for (APContact *contact in contacts) {
+        for (NSString *email in contact.emails)
+        {
+            NSString *firstName = [self nullProofString:contact.firstName];
+            NSString *lastName = [self nullProofString:contact.lastName];
+            EmailContactItem *contactItem = [[EmailContactItem alloc] initWithEmailAddress:email firstName:firstName lastName:lastName];
+            [flattenedContacts addObject:contactItem];
+        }
+    }
     
-    
+    return flattenedContacts;
 }
 
 - (void)adjustTableViewInsetTop:(CGFloat)topInset bottom:(CGFloat)bottomInset {
@@ -148,6 +181,140 @@
 
 - (void)adjustTableViewInsetBottom:(CGFloat)bottomInset {
     [self adjustTableViewInsetTop:self.tableView.contentInset.top bottom:bottomInset];
+}
+
+- (NSString *)titleForRowAtIndexPath:(NSIndexPath *)indexPath {
+    EmailContactItem *contactItem = [self.filteredContacts objectAtIndex:indexPath.row];
+    NSString* firstName = [self nullProofString:contactItem.firstName];
+    NSString* lastName = [self nullProofString:contactItem.lastName];
+    NSString* emailAddress = [self nullProofString:contactItem.emailAddress];
+    
+    return [NSString stringWithFormat:@"%@ %@ (%@)",firstName,lastName, emailAddress];
+}
+
+-(NSString*)nullProofString:(NSString*)string{
+    return (string.length>0) ? string : @"";
+}
+
+- (void) didChangeSelectedItems {
+    
+}
+
+- (NSPredicate *)newFilteringPredicateWithText:(NSString *) text {
+    return [NSPredicate predicateWithFormat:@"self.firstName contains[cd] %@ || self.lastName contains[cd] %@ || self.emailAddress CONTAINS[c] %@", text, text, text];
+}
+
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    // Return the number of sections.
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    // Return the number of rows in the section.
+    return [self.filteredContacts count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:EmailShareViewCellReuseID];
+    if (cell == nil){
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:EmailShareViewCellReuseID];
+    }
+    
+    [self configureCell:cell atIndexPath:indexPath];
+    
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    
+    id contact = [self.filteredContacts objectAtIndex:indexPath.row];
+    NSString *contactTitle = [self titleForRowAtIndexPath:indexPath];
+    
+    if ([self.privateSelectedContacts containsObject:contact]){ // contact is already selected so remove it from ContactPickerView
+        self.contactPickerView.maxNumberOfLines = self.contactPickerView.maxNumberOfLines > 2 ? self.contactPickerView.maxNumberOfLines-- : 2;
+        [self.privateSelectedContacts removeObject:contact];
+        [self.contactPickerView removeContact:contact];
+    } else {
+        // Contact has not been selected, add it to THContactPickerView
+        self.contactPickerView.maxNumberOfLines++;
+        [self.privateSelectedContacts addObject:contact];
+        [self.contactPickerView addContact:contact withName:contactTitle];
+    }
+    
+    self.filteredContacts = self.contacts;
+    
+    self.contactsAreDisplayed = false;
+    [self.tableView removeFromSuperview];
+    
+    [self didChangeSelectedItems];
+    [self.tableView reloadData];
+}
+
+
+- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+    cell.textLabel.text = [self titleForRowAtIndexPath:indexPath];
+}
+
+#pragma mark - THContactPickerTextViewDelegate
+
+- (void)contactPickerTextViewDidChange:(NSString *)textViewText {
+    if ([textViewText isEqualToString:@""]){
+        self.filteredContacts = self.contacts;
+        self.contactsAreDisplayed = false;
+        [self.tableView removeFromSuperview];
+    } else {
+        if (!self.contactsAreDisplayed) {
+            self.contactsAreDisplayed = true;
+            [self.view insertSubview:self.tableView belowSubview:self.contactPickerView];
+        }
+    }
+    
+    self.filteredContacts = [self getFilteredContacts:textViewText];
+    
+    [self.tableView reloadData];
+}
+
+- (NSArray *) getFilteredContacts:(NSString *)filterText {
+    NSPredicate *predicate = [self newFilteringPredicateWithText:filterText];
+    NSArray *candidateContents = [self.contacts filteredArrayUsingPredicate:predicate];
+    NSMutableArray *resultContacts = [[NSMutableArray alloc] init];
+    
+    for (id contact in candidateContents) {
+        if (![self.privateSelectedContacts containsObject:contact]) {
+            [resultContacts addObject:contact];
+        }
+    }
+    
+    return resultContacts;
+}
+
+- (void)contactPickerDidResize:(THContactPickerView *)contactPickerView {
+    CGRect frame = self.tableView.frame;
+    frame.origin.y = contactPickerView.frame.size.height + contactPickerView.frame.origin.y;
+    self.tableView.frame = frame;
+}
+
+- (void)contactPickerDidRemoveContact:(id)contact {
+    [self.privateSelectedContacts removeObject:contact];
+    
+    NSInteger index = [self.contacts indexOfObject:contact];
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0]];
+    [self didChangeSelectedItems];
+}
+
+- (BOOL)contactPickerTextFieldShouldReturn:(UITextField *)textField {
+    if (textField.text.length > 0){
+        NSString *contact = [[NSString alloc] initWithString:textField.text];
+        EmailContactItem *contactItem = [[EmailContactItem alloc] initWithEmailAddress:contact firstName:@"" lastName:@""];
+        [self.privateSelectedContacts addObject:contactItem];
+        [self.contactPickerView addContact:contact withName:textField.text];
+    }
+    return YES;
 }
 
 #pragma  mark - NSNotificationCenter
