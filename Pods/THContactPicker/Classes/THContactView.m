@@ -1,19 +1,19 @@
 //
-//  THContactBubble.m
+//  THContactView.m
 //  ContactPicker
 //
 //  Created by Tristan Himmelman on 11/2/12.
 //  Copyright (c) 2012 Tristan Himmelman. All rights reserved.
 //
 
-#import "THContactBubble.h"
+#import "THContactView.h"
 #import "THContactTextField.h"
 
-@interface THContactBubble ()<THContactTextFieldDelegate>
+@interface THContactView ()<THContactTextFieldDelegate>
 
 @end
 
-@implementation THContactBubble
+@implementation THContactView
 
 #define kHorizontalPadding 3
 #define kVerticalPadding 2
@@ -51,14 +51,14 @@
     return self;
 }
 
-- (id)initWithName:(NSString *)name style:(THBubbleStyle *)style selectedStyle:(THBubbleStyle *)selectedStyle {
+- (id)initWithName:(NSString *)name style:(THContactViewStyle *)style selectedStyle:(THContactViewStyle *)selectedStyle {
     if ([self initWithName:name style:style selectedStyle:selectedStyle showComma:NO]){
         
     }
     return self;
 }
 
-- (id)initWithName:(NSString *)name style:(THBubbleStyle *)style selectedStyle:(THBubbleStyle *)selectedStyle showComma:(BOOL)showComma {
+- (id)initWithName:(NSString *)name style:(THContactViewStyle *)style selectedStyle:(THContactViewStyle *)selectedStyle showComma:(BOOL)showComma {
     self = [super init];
     if (self){
         self.name = name;
@@ -67,7 +67,7 @@
         
         // default styles
         if (style == nil) {
-            style = [[THBubbleStyle alloc] initWithTextColor:k7ColorText
+            style = [[THContactViewStyle alloc] initWithTextColor:k7ColorText
                                                  gradientTop:k7ColorGradientTop
                                               gradientBottom:k7ColorGradientBottom
                                                  borderColor:k7ColorBorder
@@ -75,7 +75,7 @@
                                           cornerRadiusFactor:k7DefaultCornerRadiusFactor];
         }
         if (selectedStyle == nil) {
-            selectedStyle = [[THBubbleStyle alloc] initWithTextColor:k7ColorSelectedText
+            selectedStyle = [[THContactViewStyle alloc] initWithTextColor:k7ColorSelectedText
                                                          gradientTop:k7ColorSelectedGradientTop
                                                       gradientBottom:k7ColorSelectedGradientBottom
                                                          borderColor:k7ColorSelectedBorder
@@ -101,10 +101,11 @@
     }
     [self addSubview:self.label];
     
-    self.textView = [[THContactTextField alloc] init];
-    self.textView.delegate = self;
-    self.textView.hidden = YES;
-    [self addSubview:self.textView];
+    self.textField = [[THContactTextField alloc] init];
+	self.textField.autocorrectionType = UITextAutocorrectionTypeNo;
+    self.textField.delegate = self;
+    self.textField.hidden = YES;
+    [self addSubview:self.textField];
     
     // Create a tap gesture recognizer
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGesture)];
@@ -165,8 +166,8 @@
 }
 
 - (void)select {
-    if ([self.delegate respondsToSelector:@selector(contactBubbleWasSelected:)]){
-        [self.delegate contactBubbleWasSelected:self];
+    if ([self.delegate respondsToSelector:@selector(contactViewWasSelected:)]){
+        [self.delegate contactViewWasSelected:self];
     }
     
     CALayer *viewLayer = [self layer];
@@ -183,10 +184,14 @@
     
     self.isSelected = YES;
     
-    [self.textView becomeFirstResponder];
+    [self.textField becomeFirstResponder];
 }
 
 - (void)unSelect {
+    if ([self.delegate respondsToSelector:@selector(contactViewWasUnSelected:)]){
+        [self.delegate contactViewWasUnSelected:self];
+    }
+    
     CALayer *viewLayer = [self layer];
     viewLayer.borderColor = self.style.borderColor.CGColor;
     
@@ -204,7 +209,7 @@
     [self setNeedsDisplay];
     self.isSelected = NO;
     
-    [self.textView resignFirstResponder];
+    [self.textField resignFirstResponder];
 }
 
 - (void)handleTapGesture {
@@ -217,54 +222,42 @@
 
 #pragma mark - UITextViewDelegate
 
-- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
-    self.textView.hidden = NO;
-    
-    if ([text isEqualToString:@"\n"]){ // Return key was pressed
-        return NO;
-    }
-    
-    // Capture "delete" key press when cell is empty
-    if ([textView.text isEqualToString:@""] && [text isEqualToString:@""]){
-        if ([self.delegate respondsToSelector:@selector(contactBubbleShouldBeRemoved:)]){
-            [self.delegate contactBubbleShouldBeRemoved:self];
-        }
-        return NO;
-    } else {
-        [self unSelect];
-        if ([self.delegate respondsToSelector:@selector(contactBubbleWasUnSelected:)]){
-            [self.delegate contactBubbleWasUnSelected:self];
-        }
-    }
-        
-    return YES;
-}
+
 
 - (void)textFieldDidHitBackspaceWithEmptyText:(THContactTextField *)textView {
-    self.textView.hidden = NO;
+    self.textField.hidden = NO;
     
     // Capture "delete" key press when cell is empty
-    if ([self.delegate respondsToSelector:@selector(contactBubbleShouldBeRemoved:)]){
-        [self.delegate contactBubbleShouldBeRemoved:self];
+    if ([self.delegate respondsToSelector:@selector(contactViewShouldBeRemoved:)]){
+        [self.delegate contactViewShouldBeRemoved:self];
     }
 }
 
-//- (void)textFieldDidChange:(THContactTextField *)textField{
-//    
-//    [self unSelect];
-//    if ([self.delegate respondsToSelector:@selector(contactBubbleWasUnSelected:)]){
-//        [self.delegate contactBubbleWasUnSelected:self];
-//    }
-//}
+- (void)textFieldDidChange:(THContactTextField *)textField{
+	
+    [self unSelect];
+    if ([self.delegate respondsToSelector:@selector(contactViewWasUnSelected:)]){
+        [self.delegate contactViewWasUnSelected:self];
+    }
+	self.textField.text = nil;
+}
 
 #pragma mark - UITextInputTraits
 
 - (void)setKeyboardAppearance:(UIKeyboardAppearance)keyboardAppearance {
-    self.textView.keyboardAppearance = keyboardAppearance;
+    self.textField.keyboardAppearance = keyboardAppearance;
 }
 
 - (UIKeyboardAppearance)keyboardAppearance {
-    return self.textView.keyboardAppearance;
+    return self.textField.keyboardAppearance;
+}
+
+- (void)setReturnKeyType:(UIReturnKeyType)returnKeyType {
+    self.textField.returnKeyType = returnKeyType;
+}
+
+- (UIReturnKeyType)returnKeyType {
+    return self.textField.returnKeyType;
 }
 
 @end
