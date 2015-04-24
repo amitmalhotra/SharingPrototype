@@ -56,6 +56,7 @@ NSString *EmailShareViewCellReuseID = @"EmailShareViewCell";
     
     [self.contactPickerView setPlaceholderLabelText:NSLocalizedString(@"type emails or pick contacts?",nil)];
     [self.contactPickerView setPromptLabelText:NSLocalizedString(@"To:", nil)];
+    self.contactPickerView.delegate = self;
     
     CALayer *layer = [self.contactPickerView layer];
     [layer setShadowColor:[[UIColor colorWithRed:225.0/255.0 green:226.0/255.0 blue:228.0/255.0 alpha:1] CGColor]];
@@ -70,6 +71,25 @@ NSString *EmailShareViewCellReuseID = @"EmailShareViewCell";
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.contactsAreDisplayed = false;
+    
+    
+    NSLayoutConstraint *leftConstraint = [NSLayoutConstraint constraintWithItem:self.contentView
+                                                                      attribute:NSLayoutAttributeLeading
+                                                                      relatedBy:0
+                                                                         toItem:self.view
+                                                                      attribute:NSLayoutAttributeLeft
+                                                                     multiplier:1.0
+                                                                       constant:0];
+    [self.view addConstraint:leftConstraint];
+    
+    NSLayoutConstraint *rightConstraint = [NSLayoutConstraint constraintWithItem:self.contentView
+                                                                       attribute:NSLayoutAttributeTrailing
+                                                                       relatedBy:0
+                                                                          toItem:self.view
+                                                                       attribute:NSLayoutAttributeRight
+                                                                      multiplier:1.0
+                                                                        constant:0];
+    [self.view addConstraint:rightConstraint];
     
     [self populateContacts];
     

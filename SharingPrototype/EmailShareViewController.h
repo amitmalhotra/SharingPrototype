@@ -12,6 +12,7 @@
 @interface EmailShareViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) IBOutlet UIScrollView* scrollView;
+@property (nonatomic, strong) IBOutlet UIView* contentView;
 @property (nonatomic, strong) IBOutlet THContactPickerView* contactPickerView;
 @property (nonatomic, strong) UITableView *tableView;
 
