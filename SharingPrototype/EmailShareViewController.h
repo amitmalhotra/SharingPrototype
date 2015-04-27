@@ -13,6 +13,7 @@
 
 @property (nonatomic, strong) IBOutlet UIScrollView* scrollView;
 @property (nonatomic, strong) IBOutlet UIView* contentView;
+@property (strong, nonatomic) IBOutlet UIView* scrollableContentContainerView;
 @property (strong, nonatomic) IBOutlet UILabel* subjectLabelView;
 @property (nonatomic, strong) IBOutlet THContactPickerView* contactPickerView;
 @property (nonatomic, strong) UITableView *tableView;

@@ -74,7 +74,6 @@ NSString *EmailShareViewCellReuseID = @"EmailShareViewCell";
     self.tableView.dataSource = self;
     self.contactsAreDisplayed = false;
     
-    
     NSLayoutConstraint *leftConstraint = [NSLayoutConstraint constraintWithItem:self.contentView
                                                                       attribute:NSLayoutAttributeLeading
                                                                       relatedBy:0
@@ -317,8 +316,15 @@ NSString *EmailShareViewCellReuseID = @"EmailShareViewCell";
 
 - (void)contactPickerDidResize:(THContactPickerView *)contactPickerView {
     CGRect frame = self.tableView.frame;
+    CGRect scrollableContentContainerFrame = self.scrollableContentContainerView.frame;
+    
     frame.origin.y = contactPickerView.frame.size.height + contactPickerView.frame.origin.y;
+    scrollableContentContainerFrame.origin.y = frame.origin.y + 20;
+    
     self.tableView.frame = frame;
+    self.scrollableContentContainerView.frame = scrollableContentContainerFrame;
+    
+    
 }
 
 - (void)contactPickerDidRemoveContact:(id)contact {
