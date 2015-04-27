@@ -297,6 +297,11 @@ NSString *EmailShareViewCellReuseID = @"EmailShareViewCell";
     
     self.filteredContacts = [self getFilteredContacts:textViewText];
     
+    if (self.filteredContacts.count == 0) {
+        self.contactsAreDisplayed = false;
+        [self.tableView removeFromSuperview];
+    }
+    
     [self.tableView reloadData];
 }
 
