@@ -66,6 +66,8 @@ NSString *EmailShareViewCellReuseID = @"EmailShareViewCell";
     self.tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    self.tableView.hidden = YES;
+    [self.view insertSubview:self.tableView belowSubview:self.contactPickerView];
     self.contactsAreDisplayed = false;
     
     NSLayoutConstraint *leftConstraint = [NSLayoutConstraint constraintWithItem:self.contentView
@@ -264,7 +266,8 @@ NSString *EmailShareViewCellReuseID = @"EmailShareViewCell";
     self.filteredContacts = self.contacts;
     
     self.contactsAreDisplayed = false;
-    [self.tableView removeFromSuperview];
+//    [self.tableView removeFromSuperview];
+    self.tableView.hidden = YES;
     
     [self didChangeSelectedItems];
     [self.tableView reloadData];
@@ -281,13 +284,12 @@ NSString *EmailShareViewCellReuseID = @"EmailShareViewCell";
     if ([textViewText isEqualToString:@""]){
         self.filteredContacts = self.contacts;
         self.contactsAreDisplayed = false;
-        [self.tableView removeFromSuperview];
+        self.tableView.hidden = YES;
     } else {
         if (!self.contactsAreDisplayed) {
             CGRect tableFrame = CGRectMake(0, self.contactPickerView.frame.size.height + 5, self.view.frame.size.width, self.view.frame.size.height - self.contactPickerView.frame.size.height);
             self.tableView.frame = tableFrame;
-            
-            [self.view insertSubview:self.tableView belowSubview:self.contactPickerView];
+            self.tableView.hidden = NO;
             self.contactsAreDisplayed = true;
         }
     }
