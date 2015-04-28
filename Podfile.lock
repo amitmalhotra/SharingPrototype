@@ -2,17 +2,14 @@ PODS:
   - APAddressBook (0.1.5):
     - APAddressBook/Core (= 0.1.5)
   - APAddressBook/Core (0.1.5)
-  - SZTextView (1.1.1)
   - THContactPicker (1.1)
 
 DEPENDENCIES:
   - APAddressBook
-  - SZTextView (= 1.1.1)
   - THContactPicker (~> 1.0)
 
 SPEC CHECKSUMS:
   APAddressBook: c72fec93464d57f39966ce28c107c10253fa7d39
-  SZTextView: 9c0ae45316c4175c699451d12c6d4a8b682032a8
   THContactPicker: 21eaa73587fbfdce0783b4a5dc90f741b2b0881c
 
 COCOAPODS: 0.36.0

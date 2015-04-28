@@ -55,7 +55,7 @@
                                                             <constraint firstItem="5fE-mX-dCD" firstAttribute="top" secondItem="tn9-va-xio" secondAttribute="top" constant="10" id="sPc-Zt-4pb"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DGz-yn-DvQ" userLabel="Comments Text View" customClass="SZTextView">
+                                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DGz-yn-DvQ" userLabel="Comments Text View" customClass="UITextView">
                                                         <rect key="frame" x="0.0" y="80" width="375" height="130"/>
                                                     </view>
                                                 </subviews>

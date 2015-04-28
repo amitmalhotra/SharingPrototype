@@ -1,4 +1,3 @@
 pod 'APAddressBook'
-pod 'SZTextView', '1.1.1'
 pod 'THContactPicker', '~> 1.0'
 

@@ -9,11 +9,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-SZTextView.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-THContactPicker.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>00C0B42BFB573FF64C3706F7</key>
+		<key>7AB4605BD61DD17A33676E4F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3530787A7211423AC5823516</key>
+		<key>DABBF4BB69757B7BD8B8B2BA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E923BDB3525E8E57320BCF43</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F14633AC2D0343ABB75356A0</key>
+		<key>F4A1D8D60F63B1144ACB03D9</key>
 		<dict>
 			<key>primary</key>
 			<true/>

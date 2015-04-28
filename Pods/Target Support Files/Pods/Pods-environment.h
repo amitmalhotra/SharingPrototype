@@ -18,12 +18,6 @@
 #define COCOAPODS_VERSION_MINOR_APAddressBook_Core 1
 #define COCOAPODS_VERSION_PATCH_APAddressBook_Core 5
 
-// SZTextView
-#define COCOAPODS_POD_AVAILABLE_SZTextView
-#define COCOAPODS_VERSION_MAJOR_SZTextView 1
-#define COCOAPODS_VERSION_MINOR_SZTextView 1
-#define COCOAPODS_VERSION_PATCH_SZTextView 1
-
 // THContactPicker
 #define COCOAPODS_POD_AVAILABLE_THContactPicker
 #define COCOAPODS_VERSION_MAJOR_THContactPicker 1
