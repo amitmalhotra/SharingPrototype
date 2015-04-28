@@ -58,15 +58,9 @@ NSString *EmailShareViewCellReuseID = @"EmailShareViewCell";
     [self.contactPickerView setPromptLabelText:NSLocalizedString(@"To:", nil)];
     self.contactPickerView.delegate = self;
     
-    CALayer *layer = [self.contactPickerView layer];
-    [layer setShadowColor:[[UIColor colorWithRed:225.0/255.0 green:226.0/255.0 blue:228.0/255.0 alpha:1] CGColor]];
-    [layer setShadowOffset:CGSizeMake(0, 2)];
-    [layer setShadowOpacity:1];
-    [layer setShadowRadius:1.0f];
-    
     self.subjectLabelView.text = NSLocalizedString(@"Subject:", nill);
     
-    // Fill the rest of the view with the table view
+    // Create and pre-initialize the table view
     CGRect tableFrame = CGRectMake(0, self.contactPickerView.frame.size.height, self.view.frame.size.width, self.view.frame.size.height - self.contactPickerView.frame.size.height);
     self.tableView = [[UITableView alloc] initWithFrame:tableFrame style:UITableViewStylePlain];
     self.tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
@@ -290,8 +284,11 @@ NSString *EmailShareViewCellReuseID = @"EmailShareViewCell";
         [self.tableView removeFromSuperview];
     } else {
         if (!self.contactsAreDisplayed) {
-            self.contactsAreDisplayed = true;
+            CGRect tableFrame = CGRectMake(0, self.contactPickerView.frame.size.height + 5, self.view.frame.size.width, self.view.frame.size.height - self.contactPickerView.frame.size.height);
+            self.tableView.frame = tableFrame;
+            
             [self.view insertSubview:self.tableView belowSubview:self.contactPickerView];
+            self.contactsAreDisplayed = true;
         }
     }
     

@@ -14,6 +14,7 @@
 		3A40479A1AE050F60016EC90 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A4047991AE050F60016EC90 /* Images.xcassets */; };
 		3A40479D1AE050F60016EC90 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A40479B1AE050F60016EC90 /* LaunchScreen.xib */; };
 		3A4047A91AE050F70016EC90 /* SharingPrototypeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4047A81AE050F70016EC90 /* SharingPrototypeTests.m */; };
+		4E3772101AF01E3B0093E6CF /* SeparatorLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E37720E1AF01E3B0093E6CF /* SeparatorLine.m */; };
 		4EE57BA31AE5811B001461B7 /* EmailContactItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE57BA21AE5811B001461B7 /* EmailContactItem.m */; };
 		A9198D551D7BC1E0309CEDB9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 145139D015608A2FF720CBB1 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -43,6 +44,8 @@
 		3A4047A21AE050F70016EC90 /* SharingPrototypeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharingPrototypeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A4047A71AE050F70016EC90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A4047A81AE050F70016EC90 /* SharingPrototypeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SharingPrototypeTests.m; sourceTree = "<group>"; };
+		4E37720E1AF01E3B0093E6CF /* SeparatorLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeparatorLine.m; sourceTree = "<group>"; };
+		4E37720F1AF01E3B0093E6CF /* SeparatorLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeparatorLine.h; sourceTree = "<group>"; };
 		4EE57BA11AE5811B001461B7 /* EmailContactItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EmailContactItem.h; path = ../EmailContactItem.h; sourceTree = "<group>"; };
 		4EE57BA21AE5811B001461B7 /* EmailContactItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EmailContactItem.m; path = ../EmailContactItem.m; sourceTree = "<group>"; };
 		65689074A3BAFA52F9ABC474 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -98,6 +101,8 @@
 				3A4047931AE050F60016EC90 /* EmailShareViewController.h */,
 				3A4047941AE050F60016EC90 /* EmailShareViewController.m */,
 				3A4047961AE050F60016EC90 /* Main.storyboard */,
+				4E37720E1AF01E3B0093E6CF /* SeparatorLine.m */,
+				4E37720F1AF01E3B0093E6CF /* SeparatorLine.h */,
 				3A4047991AE050F60016EC90 /* Images.xcassets */,
 				3A40479B1AE050F60016EC90 /* LaunchScreen.xib */,
 				3A40478C1AE050F60016EC90 /* Supporting Files */,
@@ -287,6 +292,7 @@
 				3A4047951AE050F60016EC90 /* EmailShareViewController.m in Sources */,
 				3A4047921AE050F60016EC90 /* AppDelegate.m in Sources */,
 				3A40478F1AE050F60016EC90 /* main.m in Sources */,
+				4E3772101AF01E3B0093E6CF /* SeparatorLine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

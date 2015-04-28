@@ -24,7 +24,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xht-IH-5uq" customClass="THContactPickerView">
-                                                <rect key="frame" x="0.0" y="20" width="375" height="50"/>
+                                                <rect key="frame" x="0.0" y="20" width="375" height="40"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="4gi-7p-ArV"/>
                                                 </connections>
@@ -32,8 +32,12 @@
                                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CAi-u5-gag" userLabel="Scrollable Content Container View">
                                                 <rect key="frame" x="0.0" y="79" width="375" height="538"/>
                                                 <subviews>
+                                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Wo-ml-SAC" customClass="SeparatorLine">
+                                                        <rect key="frame" x="93" y="-5" width="188" height="1"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </view>
                                                     <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tn9-va-xio" userLabel="Subject Container View">
-                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="76"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="35"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nul-hv-Xb3" userLabel="Subject Label">
                                                                 <rect key="frame" x="8" y="90" width="0.0" height="0.0"/>
@@ -41,7 +45,7 @@
                                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5fE-mX-dCD" userLabel="Subject Text">
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5fE-mX-dCD" userLabel="Subject Text">
                                                                 <rect key="frame" x="16" y="86" width="351" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -56,14 +60,17 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DGz-yn-DvQ" userLabel="Comments Text View" customClass="UITextView">
-                                                        <rect key="frame" x="0.0" y="80" width="375" height="130"/>
+                                                        <rect key="frame" x="0.0" y="80" width="375" height="100"/>
                                                     </view>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstItem="tn9-va-xio" firstAttribute="leading" secondItem="CAi-u5-gag" secondAttribute="leading" id="4WJ-oM-BuI"/>
+                                                    <constraint firstAttribute="trailing" secondItem="9Wo-ml-SAC" secondAttribute="trailing" id="9z8-gw-TOf"/>
                                                     <constraint firstAttribute="trailing" secondItem="tn9-va-xio" secondAttribute="trailing" id="AAB-i8-Pea"/>
                                                     <constraint firstItem="tn9-va-xio" firstAttribute="top" secondItem="CAi-u5-gag" secondAttribute="top" id="Hs4-b1-HgV"/>
+                                                    <constraint firstAttribute="trailing" secondItem="9Wo-ml-SAC" secondAttribute="trailing" id="I5B-qm-v9I"/>
                                                     <constraint firstItem="DGz-yn-DvQ" firstAttribute="leading" secondItem="CAi-u5-gag" secondAttribute="leading" id="LMv-Ts-mQS"/>
+                                                    <constraint firstItem="9Wo-ml-SAC" firstAttribute="leading" secondItem="CAi-u5-gag" secondAttribute="leading" id="PbV-Xj-Tf8"/>
                                                     <constraint firstItem="DGz-yn-DvQ" firstAttribute="top" secondItem="tn9-va-xio" secondAttribute="bottom" constant="4" id="coc-Qs-32p"/>
                                                     <constraint firstAttribute="trailing" secondItem="DGz-yn-DvQ" secondAttribute="trailing" id="ex7-fe-PEF"/>
                                                 </constraints>
@@ -73,13 +80,12 @@
                                             <constraint firstItem="Xht-IH-5uq" firstAttribute="leading" secondItem="PxA-Cq-dpL" secondAttribute="leading" id="3Cp-hO-BYX"/>
                                             <constraint firstAttribute="width" constant="375" placeholder="YES" id="Cwu-Ke-SVr"/>
                                             <constraint firstItem="CAi-u5-gag" firstAttribute="leading" secondItem="PxA-Cq-dpL" secondAttribute="leading" id="EQw-69-esZ"/>
-                                            <constraint firstItem="CAi-u5-gag" firstAttribute="top" secondItem="Xht-IH-5uq" secondAttribute="bottom" constant="4" id="Jgo-Of-dBS"/>
+                                            <constraint firstItem="CAi-u5-gag" firstAttribute="top" secondItem="Xht-IH-5uq" secondAttribute="bottom" id="Jgo-Of-dBS"/>
                                             <constraint firstAttribute="bottom" secondItem="CAi-u5-gag" secondAttribute="bottom" id="Yhr-IE-Lge"/>
                                             <constraint firstAttribute="trailing" secondItem="CAi-u5-gag" secondAttribute="trailing" id="bRF-iX-cbM"/>
-                                            <constraint firstItem="Xht-IH-5uq" firstAttribute="top" secondItem="PxA-Cq-dpL" secondAttribute="top" constant="20" id="feQ-vO-Ph1"/>
+                                            <constraint firstItem="Xht-IH-5uq" firstAttribute="top" secondItem="PxA-Cq-dpL" secondAttribute="top" constant="15" id="feQ-vO-Ph1"/>
                                             <constraint firstAttribute="trailing" secondItem="Xht-IH-5uq" secondAttribute="trailing" id="nv0-sy-h1l"/>
                                             <constraint firstAttribute="bottom" secondItem="CAi-u5-gag" secondAttribute="bottom" id="xp4-tw-Kwi"/>
-                                            <constraint firstAttribute="bottom" secondItem="CAi-u5-gag" secondAttribute="bottom" id="zdG-Rr-53p"/>
                                         </constraints>
                                     </view>
                                 </subviews>
