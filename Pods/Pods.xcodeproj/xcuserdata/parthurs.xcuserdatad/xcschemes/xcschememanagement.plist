@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-HPGrowingTextView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-THContactPicker.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>7AB4605BD61DD17A33676E4F</key>
+		<key>25770A8C830AACBD218222E3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DABBF4BB69757B7BD8B8B2BA</key>
+		<key>53A3CB339AE6CD792C6F2FDA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F4A1D8D60F63B1144ACB03D9</key>
+		<key>64D5E99F54AB99E36EFCB343</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AD72C08B015A67922784F028</key>
 		<dict>
 			<key>primary</key>
 			<true/>

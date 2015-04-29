@@ -70,6 +70,12 @@ NSString *EmailShareViewCellReuseID = @"EmailShareViewCell";
     [self.view insertSubview:self.tableView belowSubview:self.contactPickerView];
     self.contactsAreDisplayed = false;
     
+    self.commentsTextView.minNumberOfLines = 1;
+    self.commentsTextView.maxNumberOfLines = 10;
+    self.commentsTextView.placeholder = @"Comments?";
+    self.commentsTextView.animateHeightChange = false;
+//    self.commentsTextView.backgroundColor = [UIColor grayColor];
+    
     NSLayoutConstraint *leftConstraint = [NSLayoutConstraint constraintWithItem:self.contentView
                                                                       attribute:NSLayoutAttributeLeading
                                                                       relatedBy:0

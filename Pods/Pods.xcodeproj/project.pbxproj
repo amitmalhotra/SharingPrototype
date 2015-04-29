@@ -7,336 +7,366 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		233A596F6D581C9CFF6E6890 /* THContactView.h in Headers */ = {isa = PBXBuildFile; fileRef = 706E59E57E512FE60D03D9D6 /* THContactView.h */; };
-		2476408352E458EBD9BCD356 /* APContact.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FE7D09A8EFFD4369B15282A /* APContact.h */; };
-		300629E996C33C36C9D5E334 /* THContactPickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 228DEF16F9C9C829F59274B6 /* THContactPickerView.h */; };
-		3094F057B6CAA1F746AECE51 /* THContactView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7886728CC3E4A11DF1C42676 /* THContactView.m */; };
-		3EE7D622FA0CFD1FB1E363DA /* APTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D7CE7530DD97C5FD4320491 /* APTypes.h */; };
-		3EE8014A0A32720A6B328B97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35EE6FF92C037CBB325084CA /* Foundation.framework */; };
-		46F8DB724AC6F92064E2A162 /* THContactViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 56D9D744C9552333A3AE1219 /* THContactViewStyle.m */; };
-		4946BBDAEF386D74A502EB11 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BC5D73F438DE9A81FBB2EC /* Pods-dummy.m */; };
-		4B92FBF78AE5CDA27B76B5F2 /* Pods-APAddressBook-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D0EEA5FE40E2A2D5CDF31DF /* Pods-APAddressBook-dummy.m */; };
-		58F48ECACD0F7A36471F9860 /* APAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = C1424E17298C2974BF0F90D9 /* APAddress.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		5EDA3D2CBDF3EF350F588BAC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B72EAD6C3960CB6A175327B /* CoreGraphics.framework */; };
-		633F5B87AFA9D1A1779F72E4 /* THContactPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C60802B89E03E92DB00FC28 /* THContactPickerView.m */; };
-		6625983329AFDC647F231DD4 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDC20AB45387D735AD441BE3 /* AddressBook.framework */; };
-		78BA9DC7D10F38F5BACA0368 /* APSocialProfile.h in Headers */ = {isa = PBXBuildFile; fileRef = F5A9B4A0D200CAE825C6EAE8 /* APSocialProfile.h */; };
-		7C6DEA57A3A55C511794C37C /* THContactTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1825651B438BBE641B7FB40A /* THContactTextField.m */; };
-		8DF7EE2AF6F75A41840A35E9 /* APSocialProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 6149B51864215D6967FD0C7A /* APSocialProfile.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		9EF38398A7526795B365D106 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35EE6FF92C037CBB325084CA /* Foundation.framework */; };
-		9F88EDF5446457672D76D7DB /* THContactTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FBBAAC995311FB81FE5A317 /* THContactTextField.h */; };
-		A421CE18EC45158FB895DEBC /* THContactViewStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D58676B319DED52F0E4652E /* THContactViewStyle.h */; };
-		A79FEDFAF3B000463AF0DEDF /* APAddressBook.h in Headers */ = {isa = PBXBuildFile; fileRef = 98EF2EE9B25CDC877A109917 /* APAddressBook.h */; };
-		C130C8F6B871581405C17D74 /* APAddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = D7939C153E3EEFA532CB5EEF /* APAddressBook.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		C165AB5A98952A24DCC505BC /* APContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B90BF1959B1A5F6F96C5BB5 /* APContact.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		CDD8DBFD09CBF4B055FCCAE5 /* APPhoneWithLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E559EF8FD3D77BBFA9B369D /* APPhoneWithLabel.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		D07171207C82C96457904906 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35EE6FF92C037CBB325084CA /* Foundation.framework */; };
-		D3C266033CA763D8DB1FC1F2 /* APPhoneWithLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BB3C13F2D401FFCE3D02A55 /* APPhoneWithLabel.h */; };
-		DED2BFDEBA61A32401AF5728 /* Pods-THContactPicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 41E4A4ECCB157B96C2C2EB64 /* Pods-THContactPicker-dummy.m */; };
-		FF6EFD37F47E9814DDEA1243 /* APAddress.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D4853E14B7BD8E412A211A6 /* APAddress.h */; };
+		005F0AAD8F668FC8E1535DB9 /* APSocialProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = ACF55522C92A692DE6EAF6D7 /* APSocialProfile.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		08CE52537448BFC21A6247B9 /* HPTextViewInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 51221AC0502895652B832025 /* HPTextViewInternal.h */; };
+		239DFD7679C2E80A1201359D /* APPhoneWithLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE3738BA99E795B6AEBBCF8 /* APPhoneWithLabel.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		2560EA16783DF8240CF5CD5B /* APAddressBook.h in Headers */ = {isa = PBXBuildFile; fileRef = CF6AD74614A83383CBA6E16B /* APAddressBook.h */; };
+		25A42D191D360C65C2E1EA71 /* THContactView.h in Headers */ = {isa = PBXBuildFile; fileRef = ED8D0FC09DC7AFE80CD12E21 /* THContactView.h */; };
+		2C96C1E3B8F74B40F5653C3F /* THContactPickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 66E39E7CF93ECC22374B96D2 /* THContactPickerView.h */; };
+		2D356615B922F6140F463443 /* HPTextViewInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = C525844AD6722963C1F22749 /* HPTextViewInternal.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		34C20747E92468D02957C582 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2250334E7C0941CAA47C029 /* Foundation.framework */; };
+		43DCAA6F7F4D0967DC2153F0 /* THContactPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 027BA96DEC7F366E3F1704C8 /* THContactPickerView.m */; };
+		476043C126BC137AF52B1D1E /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A8134DE11386F71598BA0B0 /* AddressBook.framework */; };
+		51E939F075847B9FBB21653E /* THContactTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = D7406FF52BA684849625A505 /* THContactTextField.m */; };
+		55FBEA85F9C444B4339A8E78 /* HPGrowingTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6715A0A2C26B77A75CA51D6D /* HPGrowingTextView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		6548B8130DFD400271994CAA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2250334E7C0941CAA47C029 /* Foundation.framework */; };
+		6CD885703F3970913F9297C7 /* APContact.m in Sources */ = {isa = PBXBuildFile; fileRef = D3EE2C702EA39E525A022E56 /* APContact.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		737990E2A3557F860FF1A5F6 /* APAddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = B4BC4F88E6D0E44FE473C79F /* APAddressBook.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		788CB9EEE5A3FB11A8A8ECA3 /* Pods-HPGrowingTextView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D29561DACCBD7C10AD0A8172 /* Pods-HPGrowingTextView-dummy.m */; };
+		9159EF433C6C6649D6D4A8A5 /* THContactView.m in Sources */ = {isa = PBXBuildFile; fileRef = B435023EE039FE12C676BBCF /* THContactView.m */; };
+		960414BA4AFCD3E7EE7DED61 /* THContactViewStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 78609A7328E9F9B6334CAD76 /* THContactViewStyle.h */; };
+		B699E84351AB49295A701635 /* APAddress.h in Headers */ = {isa = PBXBuildFile; fileRef = 93D25AA0075ACDFE76628E6E /* APAddress.h */; };
+		B989879596D12668FA92CB3C /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BCABF56B8B99E4854536FBD8 /* Pods-dummy.m */; };
+		BA72784CD7568C6F41412010 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2250334E7C0941CAA47C029 /* Foundation.framework */; };
+		C1D4AC49867C546346FA0C0A /* THContactTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EA880DC46F58D94A4E5F87E /* THContactTextField.h */; };
+		DC00F450C4E1F822C6FD5A58 /* Pods-APAddressBook-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E36FB9FF16B67934ED1451A9 /* Pods-APAddressBook-dummy.m */; };
+		E2AB6693A813B0AFE4D7414B /* APPhoneWithLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C1925051C3B9D2CD051FFB8 /* APPhoneWithLabel.h */; };
+		E36CE90729E9DC77DC20527B /* APAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF6021422B85615F3211A9 /* APAddress.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E55E9586D8EE683301AF0CF1 /* APSocialProfile.h in Headers */ = {isa = PBXBuildFile; fileRef = D5D417600922A3C1E712B083 /* APSocialProfile.h */; };
+		E8B8C2C941A1B19244B48A4B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A38074AEFCECBD13D3911F9 /* CoreGraphics.framework */; };
+		E96FACE32B7E8A9958B5D80A /* Pods-THContactPicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1BBF37DF491EAF7F10553A /* Pods-THContactPicker-dummy.m */; };
+		EAED8B35091A0BDEEC17DF3F /* APContact.h in Headers */ = {isa = PBXBuildFile; fileRef = 51017CB296C0B62C8D2441E0 /* APContact.h */; };
+		ECF0D374E4984FBF6090154F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2250334E7C0941CAA47C029 /* Foundation.framework */; };
+		F57D8CC37073B49EC67245CF /* APTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = E5B488CADBDB449D02AF1C26 /* APTypes.h */; };
+		FCD6F1E3077534D666F4E87A /* HPGrowingTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = A3CD34C059CBDE36C62656A9 /* HPGrowingTextView.h */; };
+		FDE70E7E4355716F6EA6F5A1 /* THContactViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = A412791B937EA1382C17ED47 /* THContactViewStyle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		EE07BEB16DF744B9CA2AA64E /* PBXContainerItemProxy */ = {
+		4631EABA900421F484990CCE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 20FFAD4CB36C57458E010427 /* Project object */;
+			containerPortal = 931A3F9041022658367E1AE1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F4A1D8D60F63B1144ACB03D9;
-			remoteInfo = "Pods-APAddressBook";
+			remoteGlobalIDString = AD72C08B015A67922784F028;
+			remoteInfo = "Pods-HPGrowingTextView";
 		};
-		FB7D88192ABD03D1B41288DA /* PBXContainerItemProxy */ = {
+		463838AC3D500BF2440E8319 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 20FFAD4CB36C57458E010427 /* Project object */;
+			containerPortal = 931A3F9041022658367E1AE1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = DABBF4BB69757B7BD8B8B2BA;
+			remoteGlobalIDString = 53A3CB339AE6CD792C6F2FDA;
 			remoteInfo = "Pods-THContactPicker";
+		};
+		A7359853D6C94E9953680EA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 931A3F9041022658367E1AE1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 25770A8C830AACBD218222E3;
+			remoteInfo = "Pods-APAddressBook";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1825651B438BBE641B7FB40A /* THContactTextField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = THContactTextField.m; path = Classes/THContactTextField.m; sourceTree = "<group>"; };
-		1B90BF1959B1A5F6F96C5BB5 /* APContact.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = APContact.m; path = Pod/Core/APContact.m; sourceTree = "<group>"; };
-		1D4853E14B7BD8E412A211A6 /* APAddress.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = APAddress.h; path = Pod/Core/APAddress.h; sourceTree = "<group>"; };
-		228DEF16F9C9C829F59274B6 /* THContactPickerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = THContactPickerView.h; path = Classes/THContactPickerView.h; sourceTree = "<group>"; };
-		2D6945F1D4D5F19C12A75307 /* Pods-APAddressBook.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-APAddressBook.xcconfig"; sourceTree = "<group>"; };
-		2FC21BA135CB98F2C2D9AD8A /* Pods-THContactPicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-THContactPicker-prefix.pch"; sourceTree = "<group>"; };
-		2FE7D09A8EFFD4369B15282A /* APContact.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = APContact.h; path = Pod/Core/APContact.h; sourceTree = "<group>"; };
-		35EE6FF92C037CBB325084CA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		41E4A4ECCB157B96C2C2EB64 /* Pods-THContactPicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-THContactPicker-dummy.m"; sourceTree = "<group>"; };
-		4BBB74A4352A650B05AB513B /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
-		4C60802B89E03E92DB00FC28 /* THContactPickerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = THContactPickerView.m; path = Classes/THContactPickerView.m; sourceTree = "<group>"; };
-		4FBBAAC995311FB81FE5A317 /* THContactTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = THContactTextField.h; path = Classes/THContactTextField.h; sourceTree = "<group>"; };
-		56D9D744C9552333A3AE1219 /* THContactViewStyle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = THContactViewStyle.m; path = Classes/THContactViewStyle.m; sourceTree = "<group>"; };
-		5D7CE7530DD97C5FD4320491 /* APTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = APTypes.h; path = Pod/Core/APTypes.h; sourceTree = "<group>"; };
-		6149B51864215D6967FD0C7A /* APSocialProfile.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = APSocialProfile.m; path = Pod/Core/APSocialProfile.m; sourceTree = "<group>"; };
-		6BF7DF068CB7D741659269C5 /* libPods-THContactPicker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-THContactPicker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6D58676B319DED52F0E4652E /* THContactViewStyle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = THContactViewStyle.h; path = Classes/THContactViewStyle.h; sourceTree = "<group>"; };
-		6DFD41983FC97687850D1719 /* libPods-APAddressBook.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-APAddressBook.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		706E59E57E512FE60D03D9D6 /* THContactView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = THContactView.h; path = Classes/THContactView.h; sourceTree = "<group>"; };
-		7886728CC3E4A11DF1C42676 /* THContactView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = THContactView.m; path = Classes/THContactView.m; sourceTree = "<group>"; };
-		7E559EF8FD3D77BBFA9B369D /* APPhoneWithLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = APPhoneWithLabel.m; path = Pod/Core/APPhoneWithLabel.m; sourceTree = "<group>"; };
-		85F8643FE4A9BCA72792F2D9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		8BB3C13F2D401FFCE3D02A55 /* APPhoneWithLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = APPhoneWithLabel.h; path = Pod/Core/APPhoneWithLabel.h; sourceTree = "<group>"; };
-		9852485742BCD17AD324D1DA /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
-		986EE94CD4F8BB57B98ED721 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
-		98EF2EE9B25CDC877A109917 /* APAddressBook.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = APAddressBook.h; path = Pod/Core/APAddressBook.h; sourceTree = "<group>"; };
-		9B72EAD6C3960CB6A175327B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		9D0EEA5FE40E2A2D5CDF31DF /* Pods-APAddressBook-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-APAddressBook-dummy.m"; sourceTree = "<group>"; };
-		AB27ADC2C87AE7C0B5FE40BD /* Pods-THContactPicker-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-THContactPicker-Private.xcconfig"; sourceTree = "<group>"; };
-		B572E612E151FFD2442ADF86 /* Pods-APAddressBook-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-APAddressBook-prefix.pch"; sourceTree = "<group>"; };
-		BCD1ED0F70230594A2D5D0A2 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		C1424E17298C2974BF0F90D9 /* APAddress.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = APAddress.m; path = Pod/Core/APAddress.m; sourceTree = "<group>"; };
-		C4BC5D73F438DE9A81FBB2EC /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
-		CB9427A6ABB1B96C0ABB7BEE /* Pods-APAddressBook-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-APAddressBook-Private.xcconfig"; sourceTree = "<group>"; };
-		D7939C153E3EEFA532CB5EEF /* APAddressBook.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = APAddressBook.m; path = Pod/Core/APAddressBook.m; sourceTree = "<group>"; };
-		EB0A08056A66AA556FE559A9 /* Pods-THContactPicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-THContactPicker.xcconfig"; sourceTree = "<group>"; };
-		EDC20AB45387D735AD441BE3 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/AddressBook.framework; sourceTree = DEVELOPER_DIR; };
-		EEDBA23801096E4EA0C27FDA /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
-		F201EB88E81B4617638AB382 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
-		F5A9B4A0D200CAE825C6EAE8 /* APSocialProfile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = APSocialProfile.h; path = Pod/Core/APSocialProfile.h; sourceTree = "<group>"; };
-		FD1F3AC0F6D601175CA6E57B /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		027BA96DEC7F366E3F1704C8 /* THContactPickerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = THContactPickerView.m; path = Classes/THContactPickerView.m; sourceTree = "<group>"; };
+		0C1925051C3B9D2CD051FFB8 /* APPhoneWithLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = APPhoneWithLabel.h; path = Pod/Core/APPhoneWithLabel.h; sourceTree = "<group>"; };
+		0C5B2BA2D2FD3F9EB87EF88D /* Pods-THContactPicker-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-THContactPicker-Private.xcconfig"; sourceTree = "<group>"; };
+		12CE28C304C4E88BC8A022AF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		1C702A3AAA82E485429C8A1D /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		1F401D5722081AFEF9BD1316 /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
+		26E4FED06045D551684F9FF0 /* Pods-THContactPicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-THContactPicker-prefix.pch"; sourceTree = "<group>"; };
+		27EA36AA77FB6E4D43E3090B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		2AFF6021422B85615F3211A9 /* APAddress.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = APAddress.m; path = Pod/Core/APAddress.m; sourceTree = "<group>"; };
+		2FFF06D10C402FDAD8CFF563 /* Pods-THContactPicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-THContactPicker.xcconfig"; sourceTree = "<group>"; };
+		3EA880DC46F58D94A4E5F87E /* THContactTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = THContactTextField.h; path = Classes/THContactTextField.h; sourceTree = "<group>"; };
+		3FFD5CCE3C02160EF5F34C83 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C1BBF37DF491EAF7F10553A /* Pods-THContactPicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-THContactPicker-dummy.m"; sourceTree = "<group>"; };
+		51017CB296C0B62C8D2441E0 /* APContact.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = APContact.h; path = Pod/Core/APContact.h; sourceTree = "<group>"; };
+		51221AC0502895652B832025 /* HPTextViewInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HPTextViewInternal.h; path = class/HPTextViewInternal.h; sourceTree = "<group>"; };
+		56F67338D4CDE2444E658246 /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		61A394EFE25A8DFC5DAECB0B /* libPods-HPGrowingTextView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HPGrowingTextView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		66E39E7CF93ECC22374B96D2 /* THContactPickerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = THContactPickerView.h; path = Classes/THContactPickerView.h; sourceTree = "<group>"; };
+		6715A0A2C26B77A75CA51D6D /* HPGrowingTextView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HPGrowingTextView.m; path = class/HPGrowingTextView.m; sourceTree = "<group>"; };
+		6A8134DE11386F71598BA0B0 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/AddressBook.framework; sourceTree = DEVELOPER_DIR; };
+		78609A7328E9F9B6334CAD76 /* THContactViewStyle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = THContactViewStyle.h; path = Classes/THContactViewStyle.h; sourceTree = "<group>"; };
+		7ABEC9FA0E634B4F9E726E95 /* Pods-APAddressBook-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-APAddressBook-prefix.pch"; sourceTree = "<group>"; };
+		7BDFF038982D83095611D00B /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		8BC170508467F6801E66E456 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		93D25AA0075ACDFE76628E6E /* APAddress.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = APAddress.h; path = Pod/Core/APAddress.h; sourceTree = "<group>"; };
+		98A02828EA4795EE09AB3F71 /* Pods-HPGrowingTextView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HPGrowingTextView.xcconfig"; sourceTree = "<group>"; };
+		9A38074AEFCECBD13D3911F9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		A3CD34C059CBDE36C62656A9 /* HPGrowingTextView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HPGrowingTextView.h; path = class/HPGrowingTextView.h; sourceTree = "<group>"; };
+		A412791B937EA1382C17ED47 /* THContactViewStyle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = THContactViewStyle.m; path = Classes/THContactViewStyle.m; sourceTree = "<group>"; };
+		ACF55522C92A692DE6EAF6D7 /* APSocialProfile.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = APSocialProfile.m; path = Pod/Core/APSocialProfile.m; sourceTree = "<group>"; };
+		B435023EE039FE12C676BBCF /* THContactView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = THContactView.m; path = Classes/THContactView.m; sourceTree = "<group>"; };
+		B4BC4F88E6D0E44FE473C79F /* APAddressBook.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = APAddressBook.m; path = Pod/Core/APAddressBook.m; sourceTree = "<group>"; };
+		BBBF3B0DCC9026FBB9DA04A0 /* Pods-HPGrowingTextView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HPGrowingTextView-prefix.pch"; sourceTree = "<group>"; };
+		BCABF56B8B99E4854536FBD8 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		C525844AD6722963C1F22749 /* HPTextViewInternal.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HPTextViewInternal.m; path = class/HPTextViewInternal.m; sourceTree = "<group>"; };
+		CF6AD74614A83383CBA6E16B /* APAddressBook.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = APAddressBook.h; path = Pod/Core/APAddressBook.h; sourceTree = "<group>"; };
+		D2250334E7C0941CAA47C029 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D29561DACCBD7C10AD0A8172 /* Pods-HPGrowingTextView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HPGrowingTextView-dummy.m"; sourceTree = "<group>"; };
+		D3EE2C702EA39E525A022E56 /* APContact.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = APContact.m; path = Pod/Core/APContact.m; sourceTree = "<group>"; };
+		D5D417600922A3C1E712B083 /* APSocialProfile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = APSocialProfile.h; path = Pod/Core/APSocialProfile.h; sourceTree = "<group>"; };
+		D7406FF52BA684849625A505 /* THContactTextField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = THContactTextField.m; path = Classes/THContactTextField.m; sourceTree = "<group>"; };
+		DCE3738BA99E795B6AEBBCF8 /* APPhoneWithLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = APPhoneWithLabel.m; path = Pod/Core/APPhoneWithLabel.m; sourceTree = "<group>"; };
+		DD3C4011B41CCA83581D886C /* Pods-APAddressBook-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-APAddressBook-Private.xcconfig"; sourceTree = "<group>"; };
+		E36FB9FF16B67934ED1451A9 /* Pods-APAddressBook-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-APAddressBook-dummy.m"; sourceTree = "<group>"; };
+		E4FC103486A45EA825293E5E /* libPods-APAddressBook.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-APAddressBook.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5B488CADBDB449D02AF1C26 /* APTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = APTypes.h; path = Pod/Core/APTypes.h; sourceTree = "<group>"; };
+		ED8D0FC09DC7AFE80CD12E21 /* THContactView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = THContactView.h; path = Classes/THContactView.h; sourceTree = "<group>"; };
+		F3D869CADB597D0F6F9CF50F /* Pods-HPGrowingTextView-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HPGrowingTextView-Private.xcconfig"; sourceTree = "<group>"; };
+		F5884E805B47D3CFDB8D29E3 /* libPods-THContactPicker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-THContactPicker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F87818928896AFA5CA927E39 /* Pods-APAddressBook.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-APAddressBook.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		782CECF6AC1B2DDA0AEB4CA4 /* Frameworks */ = {
+		1C866DB08A9B473254F222F4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3EE8014A0A32720A6B328B97 /* Foundation.framework in Frameworks */,
+				476043C126BC137AF52B1D1E /* AddressBook.framework in Frameworks */,
+				6548B8130DFD400271994CAA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BDB69E69AED62600C8A627AE /* Frameworks */ = {
+		41E7432EEE84912BA4D5D574 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EDA3D2CBDF3EF350F588BAC /* CoreGraphics.framework in Frameworks */,
-				9EF38398A7526795B365D106 /* Foundation.framework in Frameworks */,
+				34C20747E92468D02957C582 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DD97003B8D8E68C37A5E4198 /* Frameworks */ = {
+		9C8076CFC45E572144EA719F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6625983329AFDC647F231DD4 /* AddressBook.framework in Frameworks */,
-				D07171207C82C96457904906 /* Foundation.framework in Frameworks */,
+				ECF0D374E4984FBF6090154F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5A930CBFCBFD31671BE9BB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8B8C2C941A1B19244B48A4B /* CoreGraphics.framework in Frameworks */,
+				BA72784CD7568C6F41412010 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		122605E087B26A987F8968D6 /* Frameworks */ = {
+		033C03DB4A6E037C8044B37C /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				5D9AE1BE85AC105185BF7E87 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		275746DA5063B17E199BF9D3 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				1D4853E14B7BD8E412A211A6 /* APAddress.h */,
-				C1424E17298C2974BF0F90D9 /* APAddress.m */,
-				98EF2EE9B25CDC877A109917 /* APAddressBook.h */,
-				D7939C153E3EEFA532CB5EEF /* APAddressBook.m */,
-				2FE7D09A8EFFD4369B15282A /* APContact.h */,
-				1B90BF1959B1A5F6F96C5BB5 /* APContact.m */,
-				8BB3C13F2D401FFCE3D02A55 /* APPhoneWithLabel.h */,
-				7E559EF8FD3D77BBFA9B369D /* APPhoneWithLabel.m */,
-				F5A9B4A0D200CAE825C6EAE8 /* APSocialProfile.h */,
-				6149B51864215D6967FD0C7A /* APSocialProfile.m */,
-				5D7CE7530DD97C5FD4320491 /* APTypes.h */,
-			);
-			name = Core;
-			sourceTree = "<group>";
-		};
-		384F090970D16A5104D3C54A = {
-			isa = PBXGroup;
-			children = (
-				BCD1ED0F70230594A2D5D0A2 /* Podfile */,
-				122605E087B26A987F8968D6 /* Frameworks */,
-				3F759DE30C4A79EE9A31040F /* Pods */,
-				65BF3AC8E692B5C38530C0F6 /* Products */,
-				9B5770BF14046C3B76E134DD /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		3A7711DE77F056FE13D3DEBC /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				FD1F3AC0F6D601175CA6E57B /* Pods-acknowledgements.markdown */,
-				4BBB74A4352A650B05AB513B /* Pods-acknowledgements.plist */,
-				C4BC5D73F438DE9A81FBB2EC /* Pods-dummy.m */,
-				EEDBA23801096E4EA0C27FDA /* Pods-environment.h */,
-				9852485742BCD17AD324D1DA /* Pods-resources.sh */,
-				F201EB88E81B4617638AB382 /* Pods.debug.xcconfig */,
-				986EE94CD4F8BB57B98ED721 /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			path = "Target Support Files/Pods";
-			sourceTree = "<group>";
-		};
-		3F759DE30C4A79EE9A31040F /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				F8938ACA5B45864283A76FB6 /* APAddressBook */,
-				AB9382D6339B6C7A3061CA6C /* THContactPicker */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		5D9AE1BE85AC105185BF7E87 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				EDC20AB45387D735AD441BE3 /* AddressBook.framework */,
-				9B72EAD6C3960CB6A175327B /* CoreGraphics.framework */,
-				35EE6FF92C037CBB325084CA /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		65BF3AC8E692B5C38530C0F6 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				85F8643FE4A9BCA72792F2D9 /* libPods.a */,
-				6DFD41983FC97687850D1719 /* libPods-APAddressBook.a */,
-				6BF7DF068CB7D741659269C5 /* libPods-THContactPicker.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		7DE92972C703D4189D3AA0E4 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				EB0A08056A66AA556FE559A9 /* Pods-THContactPicker.xcconfig */,
-				AB27ADC2C87AE7C0B5FE40BD /* Pods-THContactPicker-Private.xcconfig */,
-				41E4A4ECCB157B96C2C2EB64 /* Pods-THContactPicker-dummy.m */,
-				2FC21BA135CB98F2C2D9AD8A /* Pods-THContactPicker-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-THContactPicker";
-			sourceTree = "<group>";
-		};
-		9B5770BF14046C3B76E134DD /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				3A7711DE77F056FE13D3DEBC /* Pods */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		AB9382D6339B6C7A3061CA6C /* THContactPicker */ = {
-			isa = PBXGroup;
-			children = (
-				228DEF16F9C9C829F59274B6 /* THContactPickerView.h */,
-				4C60802B89E03E92DB00FC28 /* THContactPickerView.m */,
-				4FBBAAC995311FB81FE5A317 /* THContactTextField.h */,
-				1825651B438BBE641B7FB40A /* THContactTextField.m */,
-				706E59E57E512FE60D03D9D6 /* THContactView.h */,
-				7886728CC3E4A11DF1C42676 /* THContactView.m */,
-				6D58676B319DED52F0E4652E /* THContactViewStyle.h */,
-				56D9D744C9552333A3AE1219 /* THContactViewStyle.m */,
-				7DE92972C703D4189D3AA0E4 /* Support Files */,
-			);
-			path = THContactPicker;
-			sourceTree = "<group>";
-		};
-		DEB9C522AF63CBACF0B44605 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				2D6945F1D4D5F19C12A75307 /* Pods-APAddressBook.xcconfig */,
-				CB9427A6ABB1B96C0ABB7BEE /* Pods-APAddressBook-Private.xcconfig */,
-				9D0EEA5FE40E2A2D5CDF31DF /* Pods-APAddressBook-dummy.m */,
-				B572E612E151FFD2442ADF86 /* Pods-APAddressBook-prefix.pch */,
+				F87818928896AFA5CA927E39 /* Pods-APAddressBook.xcconfig */,
+				DD3C4011B41CCA83581D886C /* Pods-APAddressBook-Private.xcconfig */,
+				E36FB9FF16B67934ED1451A9 /* Pods-APAddressBook-dummy.m */,
+				7ABEC9FA0E634B4F9E726E95 /* Pods-APAddressBook-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Pods-APAddressBook";
 			sourceTree = "<group>";
 		};
-		F8938ACA5B45864283A76FB6 /* APAddressBook */ = {
+		038B094F25BC2427B5BA468D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				275746DA5063B17E199BF9D3 /* Core */,
-				DEB9C522AF63CBACF0B44605 /* Support Files */,
+				1EB61E2DEAB6F825055372CE /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0FEB98907402AF1150B91070 /* HPGrowingTextView */ = {
+			isa = PBXGroup;
+			children = (
+				A3CD34C059CBDE36C62656A9 /* HPGrowingTextView.h */,
+				6715A0A2C26B77A75CA51D6D /* HPGrowingTextView.m */,
+				51221AC0502895652B832025 /* HPTextViewInternal.h */,
+				C525844AD6722963C1F22749 /* HPTextViewInternal.m */,
+				148C5CF212EF4BAFFB18DE4F /* Support Files */,
+			);
+			path = HPGrowingTextView;
+			sourceTree = "<group>";
+		};
+		148C5CF212EF4BAFFB18DE4F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				98A02828EA4795EE09AB3F71 /* Pods-HPGrowingTextView.xcconfig */,
+				F3D869CADB597D0F6F9CF50F /* Pods-HPGrowingTextView-Private.xcconfig */,
+				D29561DACCBD7C10AD0A8172 /* Pods-HPGrowingTextView-dummy.m */,
+				BBBF3B0DCC9026FBB9DA04A0 /* Pods-HPGrowingTextView-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-HPGrowingTextView";
+			sourceTree = "<group>";
+		};
+		1809C6DF5771592769BF06A0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2FFF06D10C402FDAD8CFF563 /* Pods-THContactPicker.xcconfig */,
+				0C5B2BA2D2FD3F9EB87EF88D /* Pods-THContactPicker-Private.xcconfig */,
+				4C1BBF37DF491EAF7F10553A /* Pods-THContactPicker-dummy.m */,
+				26E4FED06045D551684F9FF0 /* Pods-THContactPicker-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-THContactPicker";
+			sourceTree = "<group>";
+		};
+		1C8CF488AEB03A9E83462884 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3FFD5CCE3C02160EF5F34C83 /* libPods.a */,
+				E4FC103486A45EA825293E5E /* libPods-APAddressBook.a */,
+				61A394EFE25A8DFC5DAECB0B /* libPods-HPGrowingTextView.a */,
+				F5884E805B47D3CFDB8D29E3 /* libPods-THContactPicker.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1EB61E2DEAB6F825055372CE /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6A8134DE11386F71598BA0B0 /* AddressBook.framework */,
+				9A38074AEFCECBD13D3911F9 /* CoreGraphics.framework */,
+				D2250334E7C0941CAA47C029 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		41D2A9110343E552E4103763 /* APAddressBook */ = {
+			isa = PBXGroup;
+			children = (
+				CB0807985E4C0A1F1048181C /* Core */,
+				033C03DB4A6E037C8044B37C /* Support Files */,
 			);
 			path = APAddressBook;
+			sourceTree = "<group>";
+		};
+		5D4DABD25342F1C2066EC76A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				41D2A9110343E552E4103763 /* APAddressBook */,
+				0FEB98907402AF1150B91070 /* HPGrowingTextView */,
+				BCE1005A7CBB4467369FB94D /* THContactPicker */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7343E5000AFD27E215DDC0EC /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FE3410DD407BBFE2111C4757 /* Pods */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		BCE1005A7CBB4467369FB94D /* THContactPicker */ = {
+			isa = PBXGroup;
+			children = (
+				66E39E7CF93ECC22374B96D2 /* THContactPickerView.h */,
+				027BA96DEC7F366E3F1704C8 /* THContactPickerView.m */,
+				3EA880DC46F58D94A4E5F87E /* THContactTextField.h */,
+				D7406FF52BA684849625A505 /* THContactTextField.m */,
+				ED8D0FC09DC7AFE80CD12E21 /* THContactView.h */,
+				B435023EE039FE12C676BBCF /* THContactView.m */,
+				78609A7328E9F9B6334CAD76 /* THContactViewStyle.h */,
+				A412791B937EA1382C17ED47 /* THContactViewStyle.m */,
+				1809C6DF5771592769BF06A0 /* Support Files */,
+			);
+			path = THContactPicker;
+			sourceTree = "<group>";
+		};
+		CB0807985E4C0A1F1048181C /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				93D25AA0075ACDFE76628E6E /* APAddress.h */,
+				2AFF6021422B85615F3211A9 /* APAddress.m */,
+				CF6AD74614A83383CBA6E16B /* APAddressBook.h */,
+				B4BC4F88E6D0E44FE473C79F /* APAddressBook.m */,
+				51017CB296C0B62C8D2441E0 /* APContact.h */,
+				D3EE2C702EA39E525A022E56 /* APContact.m */,
+				0C1925051C3B9D2CD051FFB8 /* APPhoneWithLabel.h */,
+				DCE3738BA99E795B6AEBBCF8 /* APPhoneWithLabel.m */,
+				D5D417600922A3C1E712B083 /* APSocialProfile.h */,
+				ACF55522C92A692DE6EAF6D7 /* APSocialProfile.m */,
+				E5B488CADBDB449D02AF1C26 /* APTypes.h */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		FE3410DD407BBFE2111C4757 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				56F67338D4CDE2444E658246 /* Pods-acknowledgements.markdown */,
+				8BC170508467F6801E66E456 /* Pods-acknowledgements.plist */,
+				BCABF56B8B99E4854536FBD8 /* Pods-dummy.m */,
+				1F401D5722081AFEF9BD1316 /* Pods-environment.h */,
+				1C702A3AAA82E485429C8A1D /* Pods-resources.sh */,
+				12CE28C304C4E88BC8A022AF /* Pods.debug.xcconfig */,
+				27EA36AA77FB6E4D43E3090B /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			path = "Target Support Files/Pods";
+			sourceTree = "<group>";
+		};
+		FEC3E0D3BEF92EE45CCB5CBD = {
+			isa = PBXGroup;
+			children = (
+				7BDFF038982D83095611D00B /* Podfile */,
+				038B094F25BC2427B5BA468D /* Frameworks */,
+				5D4DABD25342F1C2066EC76A /* Pods */,
+				1C8CF488AEB03A9E83462884 /* Products */,
+				7343E5000AFD27E215DDC0EC /* Targets Support Files */,
+			);
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		074B5416879C5D73A277CC10 /* Headers */ = {
+		16146860299C4015A21DDD57 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF6EFD37F47E9814DDEA1243 /* APAddress.h in Headers */,
-				A79FEDFAF3B000463AF0DEDF /* APAddressBook.h in Headers */,
-				2476408352E458EBD9BCD356 /* APContact.h in Headers */,
-				D3C266033CA763D8DB1FC1F2 /* APPhoneWithLabel.h in Headers */,
-				78BA9DC7D10F38F5BACA0368 /* APSocialProfile.h in Headers */,
-				3EE7D622FA0CFD1FB1E363DA /* APTypes.h in Headers */,
+				2C96C1E3B8F74B40F5653C3F /* THContactPickerView.h in Headers */,
+				C1D4AC49867C546346FA0C0A /* THContactTextField.h in Headers */,
+				25A42D191D360C65C2E1EA71 /* THContactView.h in Headers */,
+				960414BA4AFCD3E7EE7DED61 /* THContactViewStyle.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		25876A6474AC3D4089C976CC /* Headers */ = {
+		8FB02CD0C253914262513832 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				300629E996C33C36C9D5E334 /* THContactPickerView.h in Headers */,
-				9F88EDF5446457672D76D7DB /* THContactTextField.h in Headers */,
-				233A596F6D581C9CFF6E6890 /* THContactView.h in Headers */,
-				A421CE18EC45158FB895DEBC /* THContactViewStyle.h in Headers */,
+				FCD6F1E3077534D666F4E87A /* HPGrowingTextView.h in Headers */,
+				08CE52537448BFC21A6247B9 /* HPTextViewInternal.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB6AEBD694856C0244BAC8F4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B699E84351AB49295A701635 /* APAddress.h in Headers */,
+				2560EA16783DF8240CF5CD5B /* APAddressBook.h in Headers */,
+				EAED8B35091A0BDEEC17DF3F /* APContact.h in Headers */,
+				E2AB6693A813B0AFE4D7414B /* APPhoneWithLabel.h in Headers */,
+				E55E9586D8EE683301AF0CF1 /* APSocialProfile.h in Headers */,
+				F57D8CC37073B49EC67245CF /* APTypes.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		7AB4605BD61DD17A33676E4F /* Pods */ = {
+		25770A8C830AACBD218222E3 /* Pods-APAddressBook */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AA7AA1B26CA349156D352F4F /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildConfigurationList = DA987CCCB0484B8C46EF58E1 /* Build configuration list for PBXNativeTarget "Pods-APAddressBook" */;
 			buildPhases = (
-				C0F6DD35B9B71270757F2902 /* Sources */,
-				782CECF6AC1B2DDA0AEB4CA4 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				11135302F8BE7B30F710CF21 /* PBXTargetDependency */,
-				64130AF8FA5082AC560AE7B7 /* PBXTargetDependency */,
-			);
-			name = Pods;
-			productName = Pods;
-			productReference = 85F8643FE4A9BCA72792F2D9 /* libPods.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		DABBF4BB69757B7BD8B8B2BA /* Pods-THContactPicker */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5EB025EB15C4B1FBADF849F3 /* Build configuration list for PBXNativeTarget "Pods-THContactPicker" */;
-			buildPhases = (
-				DB74683EA6510261B8F4B8E5 /* Sources */,
-				BDB69E69AED62600C8A627AE /* Frameworks */,
-				25876A6474AC3D4089C976CC /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-THContactPicker";
-			productName = "Pods-THContactPicker";
-			productReference = 6BF7DF068CB7D741659269C5 /* libPods-THContactPicker.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		F4A1D8D60F63B1144ACB03D9 /* Pods-APAddressBook */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9DD81409F9505DEA17403BAA /* Build configuration list for PBXNativeTarget "Pods-APAddressBook" */;
-			buildPhases = (
-				F63305A7FAF0DBAB4A89AC6E /* Sources */,
-				DD97003B8D8E68C37A5E4198 /* Frameworks */,
-				074B5416879C5D73A277CC10 /* Headers */,
+				52EC0EDE8ED20C41ADA1FCB9 /* Sources */,
+				1C866DB08A9B473254F222F4 /* Frameworks */,
+				BB6AEBD694856C0244BAC8F4 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -344,91 +374,259 @@
 			);
 			name = "Pods-APAddressBook";
 			productName = "Pods-APAddressBook";
-			productReference = 6DFD41983FC97687850D1719 /* libPods-APAddressBook.a */;
+			productReference = E4FC103486A45EA825293E5E /* libPods-APAddressBook.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		53A3CB339AE6CD792C6F2FDA /* Pods-THContactPicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A0FB913430840D8CB65F19A /* Build configuration list for PBXNativeTarget "Pods-THContactPicker" */;
+			buildPhases = (
+				7B7744D2644AEFA75BC2ED6C /* Sources */,
+				E5A930CBFCBFD31671BE9BB1 /* Frameworks */,
+				16146860299C4015A21DDD57 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-THContactPicker";
+			productName = "Pods-THContactPicker";
+			productReference = F5884E805B47D3CFDB8D29E3 /* libPods-THContactPicker.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		64D5E99F54AB99E36EFCB343 /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D547EABC9448D3ECFAC11F4 /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				A9964D8F35C58D2EECA7BFE5 /* Sources */,
+				9C8076CFC45E572144EA719F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				879F2DE654146201D98971EE /* PBXTargetDependency */,
+				0570518905A80A593625D473 /* PBXTargetDependency */,
+				DD7EB7444ABD5E3BCCD92FA6 /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = 3FFD5CCE3C02160EF5F34C83 /* libPods.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		AD72C08B015A67922784F028 /* Pods-HPGrowingTextView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B40CB14C0ABAED3AD203D1C8 /* Build configuration list for PBXNativeTarget "Pods-HPGrowingTextView" */;
+			buildPhases = (
+				7D953509E453616969F77ED0 /* Sources */,
+				41E7432EEE84912BA4D5D574 /* Frameworks */,
+				8FB02CD0C253914262513832 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-HPGrowingTextView";
+			productName = "Pods-HPGrowingTextView";
+			productReference = 61A394EFE25A8DFC5DAECB0B /* libPods-HPGrowingTextView.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		20FFAD4CB36C57458E010427 /* Project object */ = {
+		931A3F9041022658367E1AE1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
 			};
-			buildConfigurationList = 4A1203F45C6DB107882663D3 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 19D7E0131616991E0CE3566C /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 384F090970D16A5104D3C54A;
-			productRefGroup = 65BF3AC8E692B5C38530C0F6 /* Products */;
+			mainGroup = FEC3E0D3BEF92EE45CCB5CBD;
+			productRefGroup = 1C8CF488AEB03A9E83462884 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7AB4605BD61DD17A33676E4F /* Pods */,
-				F4A1D8D60F63B1144ACB03D9 /* Pods-APAddressBook */,
-				DABBF4BB69757B7BD8B8B2BA /* Pods-THContactPicker */,
+				64D5E99F54AB99E36EFCB343 /* Pods */,
+				25770A8C830AACBD218222E3 /* Pods-APAddressBook */,
+				AD72C08B015A67922784F028 /* Pods-HPGrowingTextView */,
+				53A3CB339AE6CD792C6F2FDA /* Pods-THContactPicker */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		C0F6DD35B9B71270757F2902 /* Sources */ = {
+		52EC0EDE8ED20C41ADA1FCB9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4946BBDAEF386D74A502EB11 /* Pods-dummy.m in Sources */,
+				E36CE90729E9DC77DC20527B /* APAddress.m in Sources */,
+				737990E2A3557F860FF1A5F6 /* APAddressBook.m in Sources */,
+				6CD885703F3970913F9297C7 /* APContact.m in Sources */,
+				239DFD7679C2E80A1201359D /* APPhoneWithLabel.m in Sources */,
+				005F0AAD8F668FC8E1535DB9 /* APSocialProfile.m in Sources */,
+				DC00F450C4E1F822C6FD5A58 /* Pods-APAddressBook-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DB74683EA6510261B8F4B8E5 /* Sources */ = {
+		7B7744D2644AEFA75BC2ED6C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DED2BFDEBA61A32401AF5728 /* Pods-THContactPicker-dummy.m in Sources */,
-				633F5B87AFA9D1A1779F72E4 /* THContactPickerView.m in Sources */,
-				7C6DEA57A3A55C511794C37C /* THContactTextField.m in Sources */,
-				3094F057B6CAA1F746AECE51 /* THContactView.m in Sources */,
-				46F8DB724AC6F92064E2A162 /* THContactViewStyle.m in Sources */,
+				E96FACE32B7E8A9958B5D80A /* Pods-THContactPicker-dummy.m in Sources */,
+				43DCAA6F7F4D0967DC2153F0 /* THContactPickerView.m in Sources */,
+				51E939F075847B9FBB21653E /* THContactTextField.m in Sources */,
+				9159EF433C6C6649D6D4A8A5 /* THContactView.m in Sources */,
+				FDE70E7E4355716F6EA6F5A1 /* THContactViewStyle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F63305A7FAF0DBAB4A89AC6E /* Sources */ = {
+		7D953509E453616969F77ED0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58F48ECACD0F7A36471F9860 /* APAddress.m in Sources */,
-				C130C8F6B871581405C17D74 /* APAddressBook.m in Sources */,
-				C165AB5A98952A24DCC505BC /* APContact.m in Sources */,
-				CDD8DBFD09CBF4B055FCCAE5 /* APPhoneWithLabel.m in Sources */,
-				8DF7EE2AF6F75A41840A35E9 /* APSocialProfile.m in Sources */,
-				4B92FBF78AE5CDA27B76B5F2 /* Pods-APAddressBook-dummy.m in Sources */,
+				55FBEA85F9C444B4339A8E78 /* HPGrowingTextView.m in Sources */,
+				2D356615B922F6140F463443 /* HPTextViewInternal.m in Sources */,
+				788CB9EEE5A3FB11A8A8ECA3 /* Pods-HPGrowingTextView-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9964D8F35C58D2EECA7BFE5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B989879596D12668FA92CB3C /* Pods-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		11135302F8BE7B30F710CF21 /* PBXTargetDependency */ = {
+		0570518905A80A593625D473 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-HPGrowingTextView";
+			target = AD72C08B015A67922784F028 /* Pods-HPGrowingTextView */;
+			targetProxy = 4631EABA900421F484990CCE /* PBXContainerItemProxy */;
+		};
+		879F2DE654146201D98971EE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-APAddressBook";
-			target = F4A1D8D60F63B1144ACB03D9 /* Pods-APAddressBook */;
-			targetProxy = EE07BEB16DF744B9CA2AA64E /* PBXContainerItemProxy */;
+			target = 25770A8C830AACBD218222E3 /* Pods-APAddressBook */;
+			targetProxy = A7359853D6C94E9953680EA5 /* PBXContainerItemProxy */;
 		};
-		64130AF8FA5082AC560AE7B7 /* PBXTargetDependency */ = {
+		DD7EB7444ABD5E3BCCD92FA6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-THContactPicker";
-			target = DABBF4BB69757B7BD8B8B2BA /* Pods-THContactPicker */;
-			targetProxy = FB7D88192ABD03D1B41288DA /* PBXContainerItemProxy */;
+			target = 53A3CB339AE6CD792C6F2FDA /* Pods-THContactPicker */;
+			targetProxy = 463838AC3D500BF2440E8319 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		316F997B4DE22E03EEEEAA6E /* Release */ = {
+		22C792886EBD16C93BB1FF24 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CB9427A6ABB1B96C0ABB7BEE /* Pods-APAddressBook-Private.xcconfig */;
+			baseConfigurationReference = 12CE28C304C4E88BC8A022AF /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		306CA62B2EF0BAE545A86021 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		37FF32A90AF2853534B821C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3D869CADB597D0F6F9CF50F /* Pods-HPGrowingTextView-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-HPGrowingTextView/Pods-HPGrowingTextView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		75384C23936C4EBAA8FD26BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27EA36AA77FB6E4D43E3090B /* Pods.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		977A942F6DF5C0513C76239A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C5B2BA2D2FD3F9EB87EF88D /* Pods-THContactPicker-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-THContactPicker/Pods-THContactPicker-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		ADD1270BEECC28919C367723 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD3C4011B41CCA83581D886C /* Pods-APAddressBook-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/Pods-APAddressBook/Pods-APAddressBook-prefix.pch";
@@ -442,7 +640,7 @@
 			};
 			name = Release;
 		};
-		450BE18EE7FE7B949EE38985 /* Debug */ = {
+		C083A55A0347BA4318367604 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -481,41 +679,9 @@
 			};
 			name = Debug;
 		};
-		641BB62D4342C532CA717556 /* Release */ = {
+		C8D4E66F78976E31956D38A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 986EE94CD4F8BB57B98ED721 /* Pods.release.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		6E6A5E27869DBF592CD1418D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AB27ADC2C87AE7C0B5FE40BD /* Pods-THContactPicker-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-THContactPicker/Pods-THContactPicker-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		702D319E6F12AB6682098049 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CB9427A6ABB1B96C0ABB7BEE /* Pods-APAddressBook-Private.xcconfig */;
+			baseConfigurationReference = DD3C4011B41CCA83581D886C /* Pods-APAddressBook-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/Pods-APAddressBook/Pods-APAddressBook-prefix.pch";
@@ -529,59 +695,25 @@
 			};
 			name = Debug;
 		};
-		86018D820FC17E653596DCAC /* Debug */ = {
+		DFA56C80D00E58CB6996D764 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F201EB88E81B4617638AB382 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = F3D869CADB597D0F6F9CF50F /* Pods-HPGrowingTextView-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-HPGrowingTextView/Pods-HPGrowingTextView-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
-		A00F4DEE026228416677B671 /* Release */ = {
+		F7111CA8394F7A0E59B8C2AA /* Release */ = {
 			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		FD1D19A1261589BAD8826341 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AB27ADC2C87AE7C0B5FE40BD /* Pods-THContactPicker-Private.xcconfig */;
+			baseConfigurationReference = 0C5B2BA2D2FD3F9EB87EF88D /* Pods-THContactPicker-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/Pods-THContactPicker/Pods-THContactPicker-prefix.pch";
@@ -598,43 +730,52 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4A1203F45C6DB107882663D3 /* Build configuration list for PBXProject "Pods" */ = {
+		19D7E0131616991E0CE3566C /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				450BE18EE7FE7B949EE38985 /* Debug */,
-				A00F4DEE026228416677B671 /* Release */,
+				C083A55A0347BA4318367604 /* Debug */,
+				306CA62B2EF0BAE545A86021 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5EB025EB15C4B1FBADF849F3 /* Build configuration list for PBXNativeTarget "Pods-THContactPicker" */ = {
+		7A0FB913430840D8CB65F19A /* Build configuration list for PBXNativeTarget "Pods-THContactPicker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6E6A5E27869DBF592CD1418D /* Debug */,
-				FD1D19A1261589BAD8826341 /* Release */,
+				977A942F6DF5C0513C76239A /* Debug */,
+				F7111CA8394F7A0E59B8C2AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9DD81409F9505DEA17403BAA /* Build configuration list for PBXNativeTarget "Pods-APAddressBook" */ = {
+		8D547EABC9448D3ECFAC11F4 /* Build configuration list for PBXNativeTarget "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				702D319E6F12AB6682098049 /* Debug */,
-				316F997B4DE22E03EEEEAA6E /* Release */,
+				22C792886EBD16C93BB1FF24 /* Debug */,
+				75384C23936C4EBAA8FD26BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AA7AA1B26CA349156D352F4F /* Build configuration list for PBXNativeTarget "Pods" */ = {
+		B40CB14C0ABAED3AD203D1C8 /* Build configuration list for PBXNativeTarget "Pods-HPGrowingTextView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				86018D820FC17E653596DCAC /* Debug */,
-				641BB62D4342C532CA717556 /* Release */,
+				DFA56C80D00E58CB6996D764 /* Debug */,
+				37FF32A90AF2853534B821C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA987CCCB0484B8C46EF58E1 /* Build configuration list for PBXNativeTarget "Pods-APAddressBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8D4E66F78976E31956D38A0 /* Debug */,
+				ADD1270BEECC28919C367723 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 20FFAD4CB36C57458E010427 /* Project object */;
+	rootObject = 931A3F9041022658367E1AE1 /* Project object */;
 }

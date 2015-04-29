@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "THContactPickerView.h"
+#import "HPGrowingTextView.h"
 
 @interface EmailShareViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
@@ -17,6 +18,7 @@
 @property (strong, nonatomic) IBOutlet UILabel* subjectLabelView;
 @property (nonatomic, strong) IBOutlet THContactPickerView* contactPickerView;
 @property (nonatomic, strong) UITableView *tableView;
+@property (strong, nonatomic) IBOutlet HPGrowingTextView *commentsTextView;
 
 
 

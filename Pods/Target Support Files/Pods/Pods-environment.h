@@ -18,6 +18,12 @@
 #define COCOAPODS_VERSION_MINOR_APAddressBook_Core 1
 #define COCOAPODS_VERSION_PATCH_APAddressBook_Core 5
 
+// HPGrowingTextView
+#define COCOAPODS_POD_AVAILABLE_HPGrowingTextView
+#define COCOAPODS_VERSION_MAJOR_HPGrowingTextView 1
+#define COCOAPODS_VERSION_MINOR_HPGrowingTextView 1
+#define COCOAPODS_VERSION_PATCH_HPGrowingTextView 0
+
 // THContactPicker
 #define COCOAPODS_POD_AVAILABLE_THContactPicker
 #define COCOAPODS_VERSION_MAJOR_THContactPicker 1
