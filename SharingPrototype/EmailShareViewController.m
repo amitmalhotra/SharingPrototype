@@ -266,7 +266,6 @@ NSString *EmailShareViewCellReuseID = @"EmailShareViewCell";
     self.filteredContacts = self.contacts;
     
     self.contactsAreDisplayed = false;
-//    [self.tableView removeFromSuperview];
     self.tableView.hidden = YES;
     
     [self didChangeSelectedItems];
