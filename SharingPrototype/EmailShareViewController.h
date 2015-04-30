@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "THContactPickerView.h"
 #import "HPGrowingTextView.h"
+#import "SeparatorLine.h"
 
 @interface EmailShareViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
@@ -19,6 +20,7 @@
 @property (nonatomic, strong) IBOutlet THContactPickerView* contactPickerView;
 @property (nonatomic, strong) UITableView *tableView;
 @property (strong, nonatomic) IBOutlet HPGrowingTextView *commentsTextView;
+@property (strong, nonatomic) IBOutlet SeparatorLine *separatorLine3View;
 
 
 

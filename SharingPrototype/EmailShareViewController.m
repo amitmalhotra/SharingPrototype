@@ -12,7 +12,7 @@
 #import "EmailContactItem.h"
 
 
-@interface EmailShareViewController () <THContactPickerDelegate>
+@interface EmailShareViewController () <THContactPickerDelegate, HPGrowingTextViewDelegate>
 
 @property (nonatomic, strong) NSArray *contacts;
 @property (nonatomic, strong) NSMutableArray *privateSelectedContacts;
@@ -74,6 +74,7 @@ NSString *EmailShareViewCellReuseID = @"EmailShareViewCell";
     self.commentsTextView.maxNumberOfLines = 10;
     self.commentsTextView.placeholder = @"Comments?";
     self.commentsTextView.animateHeightChange = false;
+    self.commentsTextView.delegate = self;
 //    self.commentsTextView.backgroundColor = [UIColor grayColor];
     
     NSLayoutConstraint *leftConstraint = [NSLayoutConstraint constraintWithItem:self.contentView
@@ -281,6 +282,14 @@ NSString *EmailShareViewCellReuseID = @"EmailShareViewCell";
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     cell.textLabel.text = [self titleForRowAtIndexPath:indexPath];
+}
+
+#pragma mark - HPGrowingTextViewDelegate
+
+- (void)growingTextView:(HPGrowingTextView *)growingTextView didChangeHeight:(float)height {
+    CGRect separatorFrame = _separatorLine3View.frame;
+    separatorFrame.origin.y = _commentsTextView.frame.origin.y + height +2;
+    _separatorLine3View.frame = separatorFrame;
 }
 
 #pragma mark - THContactPickerTextViewDelegate
