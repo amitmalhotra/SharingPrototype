@@ -46,7 +46,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5fE-mX-dCD" userLabel="Subject Text">
-                                                                <rect key="frame" x="16" y="10" width="351" height="30"/>
+                                                                <rect key="frame" x="16" y="12" width="351" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
@@ -56,7 +56,7 @@
                                                             <constraint firstItem="nul-hv-Xb3" firstAttribute="top" secondItem="tn9-va-xio" secondAttribute="top" constant="10" id="GTA-Hr-aRv"/>
                                                             <constraint firstAttribute="trailing" secondItem="5fE-mX-dCD" secondAttribute="trailing" constant="8" id="lGb-qp-FaF"/>
                                                             <constraint firstItem="5fE-mX-dCD" firstAttribute="leading" secondItem="nul-hv-Xb3" secondAttribute="trailing" constant="8" id="rJL-vI-PCm"/>
-                                                            <constraint firstItem="5fE-mX-dCD" firstAttribute="top" secondItem="tn9-va-xio" secondAttribute="top" constant="10" id="sPc-Zt-4pb"/>
+                                                            <constraint firstItem="5fE-mX-dCD" firstAttribute="top" secondItem="tn9-va-xio" secondAttribute="top" constant="12" id="sPc-Zt-4pb"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wx6-Hn-9a9" userLabel="Separator Line 2" customClass="SeparatorLine">
