@@ -75,7 +75,10 @@ NSString *EmailShareViewCellReuseID = @"EmailShareViewCell";
     self.commentsTextView.placeholder = @"Comments?";
     self.commentsTextView.animateHeightChange = false;
     self.commentsTextView.delegate = self;
-//    self.commentsTextView.backgroundColor = [UIColor grayColor];
+    
+    NSURL *URL = [NSURL URLWithString:@"http://xvia-dev.s3.amazonaws.com/share/test/content/Preview.html"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+    [self.previewWebView loadRequest:request];
     
     NSLayoutConstraint *leftConstraint = [NSLayoutConstraint constraintWithItem:self.contentView
                                                                       attribute:NSLayoutAttributeLeading
@@ -287,9 +290,9 @@ NSString *EmailShareViewCellReuseID = @"EmailShareViewCell";
 #pragma mark - HPGrowingTextViewDelegate
 
 - (void)growingTextView:(HPGrowingTextView *)growingTextView didChangeHeight:(float)height {
-    CGRect separatorFrame = _separatorLine3View.frame;
-    separatorFrame.origin.y = _commentsTextView.frame.origin.y + height +2;
-    _separatorLine3View.frame = separatorFrame;
+    CGRect previewContentFrame = _previewContentView.frame;
+    previewContentFrame.origin.y = _commentsTextView.frame.origin.y + height +2;
+    _previewContentView.frame = previewContentFrame;
 }
 
 #pragma mark - THContactPickerTextViewDelegate
