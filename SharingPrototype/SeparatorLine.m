@@ -27,7 +27,6 @@
     [topSeparatorView setBackgroundColor:self.backgroundColor];
     [self addSubview:topSeparatorView];
     
-    self.backgroundColor = [UIColor clearColor];
     self.userInteractionEnabled = NO;
 }
 
