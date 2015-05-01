@@ -28,7 +28,10 @@
 
 @implementation EmailShareViewController
 
+#define kMaxCommentsCharacters		500   // the maximum number of character permitted in the comments
+
 NSString *EmailShareViewCellReuseID = @"EmailShareViewCell";
+NSString *commentsCharacterCountLabelTemplate = @"Maximun %i characters (%i remaining)";
 
 #pragma mark - Public properties
 
@@ -75,6 +78,7 @@ NSString *EmailShareViewCellReuseID = @"EmailShareViewCell";
     self.commentsTextView.placeholder = @"Comments?";
     self.commentsTextView.animateHeightChange = false;
     self.commentsTextView.delegate = self;
+    self.characterCountLabelView.text = [NSString stringWithFormat:commentsCharacterCountLabelTemplate, kMaxCommentsCharacters, kMaxCommentsCharacters];
     
     NSURL *URL = [NSURL URLWithString:@"http://xvia-dev.s3.amazonaws.com/share/test/content/Preview.html"];
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
@@ -293,6 +297,33 @@ NSString *EmailShareViewCellReuseID = @"EmailShareViewCell";
     CGRect previewContentFrame = _previewContentView.frame;
     previewContentFrame.origin.y = _commentsTextView.frame.origin.y + height +2;
     _previewContentView.frame = previewContentFrame;
+}
+
+- (BOOL)growingTextView:(HPGrowingTextView *)growingTextView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+    if (text.length == 0) {
+        if (growingTextView.text.length != 0) {
+            return YES;
+        } else {
+            return NO;
+        }
+    }
+    
+    if (growingTextView.text.length > kMaxCommentsCharacters - 1) {
+        return NO;
+    }
+    
+    return YES;
+}
+
+- (void)growingTextViewDidChange:(HPGrowingTextView *)growingTextView {
+    NSString *tempString = [NSString stringWithString:growingTextView.text];
+    
+    if (tempString.length == 0) {
+        self.characterCountLabelView.text = @"";
+    } else {
+            self.characterCountLabelView.text = [NSString stringWithFormat:commentsCharacterCountLabelTemplate, kMaxCommentsCharacters, kMaxCommentsCharacters - tempString.length];
+    }
+
 }
 
 #pragma mark - THContactPickerTextViewDelegate
