@@ -69,15 +69,21 @@
                                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kkw-aT-EVw" userLabel="Preview Container View">
                                                         <rect key="frame" x="0.0" y="78" width="375" height="458"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jhd-Cv-c3P" userLabel="Separator Line 3" customClass="SeparatorLine">
-                                                                <rect key="frame" x="0.0" y="2" width="375" height="1"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Maximun 500 characters (500 remaining)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vz8-Vx-CQ9" userLabel="Character Count Label">
+                                                                <rect key="frame" x="4" y="2" width="40" height="8"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jhd-Cv-c3P" userLabel="Separator Line 3" customClass="SeparatorLine">
+                                                                <rect key="frame" x="0.0" y="12" width="375" height="1"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="1" id="vwd-4y-Rfd"/>
                                                                 </constraints>
                                                             </view>
-                                                            <webView userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XSX-Ws-oCw" userLabel="Preview Web View">
-                                                                <rect key="frame" x="0.0" y="4" width="375" height="454"/>
+                                                            <webView userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XSX-Ws-oCw" userLabel="Preview Web View">
+                                                                <rect key="frame" x="0.0" y="15" width="375" height="443"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="454" id="1kw-9w-joD"/>
@@ -91,10 +97,17 @@
                                                             <constraint firstItem="XSX-Ws-oCw" firstAttribute="leading" secondItem="Kkw-aT-EVw" secondAttribute="leading" id="BZZ-QC-QIF"/>
                                                             <constraint firstAttribute="trailing" secondItem="XSX-Ws-oCw" secondAttribute="trailing" id="EzS-QF-S1o"/>
                                                             <constraint firstItem="XSX-Ws-oCw" firstAttribute="top" secondItem="jhd-Cv-c3P" secondAttribute="bottom" constant="1" id="ND4-9G-zVg"/>
+                                                            <constraint firstItem="Vz8-Vx-CQ9" firstAttribute="leading" secondItem="Kkw-aT-EVw" secondAttribute="leading" constant="4" id="UNQ-cz-iMp"/>
                                                             <constraint firstItem="jhd-Cv-c3P" firstAttribute="leading" secondItem="Kkw-aT-EVw" secondAttribute="leading" id="fVx-bf-kcV"/>
                                                             <constraint firstAttribute="trailing" secondItem="jhd-Cv-c3P" secondAttribute="trailing" id="gJn-Dc-gjn"/>
                                                             <constraint firstAttribute="height" constant="458" id="kDn-G0-qUy"/>
+                                                            <constraint firstItem="jhd-Cv-c3P" firstAttribute="top" secondItem="Vz8-Vx-CQ9" secondAttribute="bottom" constant="2" id="upW-ua-RbE"/>
                                                         </constraints>
+                                                        <variation key="default">
+                                                            <mask key="constraints">
+                                                                <exclude reference="6no-nY-eCi"/>
+                                                            </mask>
+                                                        </variation>
                                                     </view>
                                                 </subviews>
                                                 <constraints>
@@ -162,6 +175,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="characterCountLabelView" destination="Vz8-Vx-CQ9" id="60i-Kz-OLP"/>
                         <outlet property="commentsTextView" destination="DGz-yn-DvQ" id="5l7-H3-jWV"/>
                         <outlet property="contactPickerView" destination="Xht-IH-5uq" id="l1u-VA-qij"/>
                         <outlet property="contentView" destination="PxA-Cq-dpL" id="DzD-VK-Abl"/>

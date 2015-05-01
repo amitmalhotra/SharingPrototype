@@ -21,6 +21,7 @@
 @property (strong, nonatomic) IBOutlet HPGrowingTextView *commentsTextView;
 @property (strong, nonatomic) IBOutlet UIView *previewContentView;
 @property (strong, nonatomic) IBOutlet UIWebView *previewWebView;
+@property (strong, nonatomic) IBOutlet UILabel *characterCountLabelView;
 
 
 
