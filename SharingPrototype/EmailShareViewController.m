@@ -129,7 +129,6 @@ NSString *commentsCharacterCountLabelTemplate = @"Maximun %i characters (%i rema
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-
 #pragma mark - Helper Methods
 
 -(void)populateContacts{
@@ -268,8 +267,6 @@ NSString *commentsCharacterCountLabelTemplate = @"Maximun %i characters (%i rema
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-//    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     
     id contact = [self.filteredContacts objectAtIndex:indexPath.row];
     NSString *contactTitle = [self titleForRowAtIndexPath:indexPath];
