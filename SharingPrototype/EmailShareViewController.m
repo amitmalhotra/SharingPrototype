@@ -12,13 +12,14 @@
 #import "EmailContactItem.h"
 
 
-@interface EmailShareViewController () <THContactPickerDelegate, HPGrowingTextViewDelegate>
+@interface EmailShareViewController () <UIWebViewDelegate, THContactPickerDelegate, HPGrowingTextViewDelegate>
 
 @property (nonatomic, strong) NSArray *contacts;
 @property (nonatomic, strong) NSMutableArray *privateSelectedContacts;
 @property (nonatomic, strong) NSArray *filteredContacts;
 @property (nonatomic) NSInteger selectedCount;
 @property (nonatomic, assign) BOOL contactsAreDisplayed;
+@property (nonatomic, strong)UIActivityIndicatorView *webViewActivityIndicator;
 
 - (NSPredicate *)newFilteringPredicateWithText:(NSString *) text;
 - (void) didChangeSelectedItems;
@@ -80,6 +81,13 @@ NSString *commentsCharacterCountLabelTemplate = @"Maximun %i characters (%i rema
     self.commentsTextView.delegate = self;
     self.characterCountLabelView.text = [NSString stringWithFormat:commentsCharacterCountLabelTemplate, kMaxCommentsCharacters, kMaxCommentsCharacters];
     
+    UIActivityIndicatorView *webViewLoadIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    webViewLoadIndicator.color = [UIColor blackColor];
+    [webViewLoadIndicator setCenter:self.view.center];
+    self.webViewActivityIndicator = webViewLoadIndicator;
+    [self.previewWebView addSubview:self.webViewActivityIndicator];
+    
+    self.previewWebView.delegate = self;
     NSURL *URL = [NSURL URLWithString:@"http://xvia-dev.s3.amazonaws.com/share/test/content/Preview.html"];
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     [self.previewWebView loadRequest:request];
@@ -261,7 +269,7 @@ NSString *commentsCharacterCountLabelTemplate = @"Maximun %i characters (%i rema
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+//    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     
     id contact = [self.filteredContacts objectAtIndex:indexPath.row];
     NSString *contactTitle = [self titleForRowAtIndexPath:indexPath];
@@ -289,6 +297,16 @@ NSString *commentsCharacterCountLabelTemplate = @"Maximun %i characters (%i rema
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     cell.textLabel.text = [self titleForRowAtIndexPath:indexPath];
+}
+
+#pragma mark - UIWebViewDelegate
+
+- (void)webViewDidStartLoad:(UIWebView *)webView {
+    [self.webViewActivityIndicator startAnimating];
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+    [self.webViewActivityIndicator stopAnimating];
 }
 
 #pragma mark - HPGrowingTextViewDelegate
@@ -335,7 +353,7 @@ NSString *commentsCharacterCountLabelTemplate = @"Maximun %i characters (%i rema
         self.tableView.hidden = YES;
     } else {
         if (!self.contactsAreDisplayed) {
-            CGRect tableFrame = CGRectMake(0, self.contactPickerView.frame.size.height + 5, self.view.frame.size.width, self.view.frame.size.height - self.contactPickerView.frame.size.height);
+            CGRect tableFrame = CGRectMake(0, self.contactPickerView.frame.origin.y + self.contactPickerView.frame.size.height, self.view.frame.size.width, self.view.frame.size.height - self.contactPickerView.frame.size.height);
             self.tableView.frame = tableFrame;
             self.tableView.hidden = NO;
             self.contactsAreDisplayed = true;
@@ -382,8 +400,8 @@ NSString *commentsCharacterCountLabelTemplate = @"Maximun %i characters (%i rema
 - (void)contactPickerDidRemoveContact:(id)contact {
     [self.privateSelectedContacts removeObject:contact];
     
-    NSInteger index = [self.contacts indexOfObject:contact];
-    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0]];
+//    NSInteger index = [self.contacts indexOfObject:contact];
+//    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0]];
     [self didChangeSelectedItems];
 }
 
