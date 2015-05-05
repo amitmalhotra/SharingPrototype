@@ -81,6 +81,8 @@ NSString *commentsCharacterCountLabelTemplate = @"Maximun %i characters (%i rema
     self.commentsTextView.delegate = self;
     self.characterCountLabelView.text = [NSString stringWithFormat:commentsCharacterCountLabelTemplate, kMaxCommentsCharacters, kMaxCommentsCharacters];
     
+    self.previewLabelView.text = NSLocalizedString(@"Preview", nill);
+    
     UIActivityIndicatorView *webViewLoadIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     webViewLoadIndicator.color = [UIColor blackColor];
     [webViewLoadIndicator setCenter:self.view.center];
