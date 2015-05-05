@@ -13,7 +13,7 @@
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS" customClass="EmailShareView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -25,7 +25,7 @@
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uah-EY-rjZ" userLabel="Top Separator Line" customClass="SeparatorLine">
                                                 <rect key="frame" x="0.0" y="20" width="375" height="1"/>
-                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="cUN-lZ-h7s"/>
                                                 </constraints>
@@ -39,12 +39,12 @@
                                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="4gi-7p-ArV"/>
                                                 </connections>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CAi-u5-gag" userLabel="Scrollable Content Container View">
-                                                <rect key="frame" x="0.0" y="62" width="375" height="538"/>
+                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CAi-u5-gag" userLabel="Scrollable Content Container View">
+                                                <rect key="frame" x="0.0" y="62" width="375" height="555"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Wo-ml-SAC" customClass="SeparatorLine">
-                                                        <rect key="frame" x="6" y="2" width="375" height="1"/>
-                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Wo-ml-SAC" customClass="SeparatorLine">
+                                                        <rect key="frame" x="6" y="2" width="369" height="1"/>
+                                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tn9-va-xio" userLabel="Subject Container View">
                                                         <rect key="frame" x="0.0" y="5" width="375" height="35"/>
@@ -55,8 +55,8 @@
                                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5fE-mX-dCD" userLabel="Subject Text">
-                                                                <rect key="frame" x="16" y="12" width="351" height="30"/>
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5fE-mX-dCD" userLabel="Subject Text">
+                                                                <rect key="frame" x="16" y="12" width="351" height="17"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
@@ -70,14 +70,22 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wx6-Hn-9a9" userLabel="Separator Line 2" customClass="SeparatorLine">
-                                                        <rect key="frame" x="6" y="42" width="375" height="1"/>
-                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <rect key="frame" x="6" y="42" width="369" height="1"/>
+                                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
-                                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DGz-yn-DvQ" userLabel="Comments Text View" customClass="HPGrowingTextView">
+                                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DGz-yn-DvQ" userLabel="Comments Text View" customClass="EmailShareGrowingTextView">
                                                         <rect key="frame" x="0.0" y="45" width="375" height="31"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="31" id="Wki-4k-kNK"/>
+                                                        </constraints>
+                                                        <variation key="default">
+                                                            <mask key="constraints">
+                                                                <exclude reference="Wki-4k-kNK"/>
+                                                            </mask>
+                                                        </variation>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kkw-aT-EVw" userLabel="Preview Container View">
-                                                        <rect key="frame" x="0.0" y="78" width="375" height="458"/>
+                                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kkw-aT-EVw" userLabel="Preview Container View">
+                                                        <rect key="frame" x="0.0" y="78" width="375" height="475"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Maximun 500 characters (500 remaining)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vz8-Vx-CQ9" userLabel="Character Count Label">
                                                                 <rect key="frame" x="6" y="2" width="40" height="8"/>
@@ -86,8 +94,8 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jhd-Cv-c3P" userLabel="Separator Line 3" customClass="SeparatorLine">
-                                                                <rect key="frame" x="6" y="12" width="375" height="1"/>
-                                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <rect key="frame" x="6" y="12" width="369" height="1"/>
+                                                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="1" id="vwd-4y-Rfd"/>
                                                                 </constraints>
@@ -96,7 +104,7 @@
                                                                 <rect key="frame" x="0.0" y="15" width="375" height="443"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="454" id="1kw-9w-joD"/>
+                                                                    <constraint firstAttribute="height" constant="443" id="1kw-9w-joD"/>
                                                                 </constraints>
                                                             </webView>
                                                         </subviews>
@@ -110,7 +118,7 @@
                                                             <constraint firstItem="Vz8-Vx-CQ9" firstAttribute="leading" secondItem="Kkw-aT-EVw" secondAttribute="leading" constant="6" id="UNQ-cz-iMp"/>
                                                             <constraint firstItem="jhd-Cv-c3P" firstAttribute="leading" secondItem="Kkw-aT-EVw" secondAttribute="leading" constant="6" id="fVx-bf-kcV"/>
                                                             <constraint firstAttribute="trailing" secondItem="jhd-Cv-c3P" secondAttribute="trailing" id="gJn-Dc-gjn"/>
-                                                            <constraint firstAttribute="height" constant="458" id="kDn-G0-qUy"/>
+                                                            <constraint firstAttribute="height" constant="475" id="kDn-G0-qUy"/>
                                                             <constraint firstItem="jhd-Cv-c3P" firstAttribute="top" secondItem="Vz8-Vx-CQ9" secondAttribute="bottom" constant="2" id="upW-ua-RbE"/>
                                                         </constraints>
                                                         <variation key="default">
@@ -127,11 +135,11 @@
                                                     <constraint firstAttribute="trailing" secondItem="9Wo-ml-SAC" secondAttribute="trailing" id="9z8-gw-TOf"/>
                                                     <constraint firstAttribute="trailing" secondItem="tn9-va-xio" secondAttribute="trailing" id="AAB-i8-Pea"/>
                                                     <constraint firstAttribute="bottom" secondItem="9Wo-ml-SAC" secondAttribute="bottom" constant="535" id="EcZ-Lr-Orv"/>
-                                                    <constraint firstItem="tn9-va-xio" firstAttribute="top" secondItem="CAi-u5-gag" secondAttribute="top" id="Hs4-b1-HgV"/>
+                                                    <constraint firstItem="tn9-va-xio" firstAttribute="top" secondItem="CAi-u5-gag" secondAttribute="top" constant="5" id="Hs4-b1-HgV"/>
                                                     <constraint firstItem="9Wo-ml-SAC" firstAttribute="trailing" secondItem="CAi-u5-gag" secondAttribute="trailing" id="I5B-qm-v9I"/>
                                                     <constraint firstItem="DGz-yn-DvQ" firstAttribute="leading" secondItem="CAi-u5-gag" secondAttribute="leading" id="LMv-Ts-mQS"/>
                                                     <constraint firstItem="wx6-Hn-9a9" firstAttribute="top" secondItem="9Wo-ml-SAC" secondAttribute="bottom" constant="34" id="LRE-hX-W6e"/>
-                                                    <constraint firstItem="Kkw-aT-EVw" firstAttribute="top" secondItem="DGz-yn-DvQ" secondAttribute="bottom" constant="2" id="LRn-Ft-PwR"/>
+                                                    <constraint firstItem="Kkw-aT-EVw" firstAttribute="top" secondItem="DGz-yn-DvQ" secondAttribute="bottom" id="LRn-Ft-PwR"/>
                                                     <constraint firstAttribute="bottom" secondItem="wx6-Hn-9a9" secondAttribute="bottom" constant="500" id="PFn-CH-2zV"/>
                                                     <constraint firstItem="9Wo-ml-SAC" firstAttribute="leading" secondItem="CAi-u5-gag" secondAttribute="leading" constant="6" id="PbV-Xj-Tf8"/>
                                                     <constraint firstItem="Kkw-aT-EVw" firstAttribute="leading" secondItem="CAi-u5-gag" secondAttribute="leading" id="Xse-3F-wcq"/>
@@ -141,7 +149,7 @@
                                                     <constraint firstAttribute="trailing" secondItem="Kkw-aT-EVw" secondAttribute="trailing" id="elH-VM-aFd"/>
                                                     <constraint firstAttribute="trailing" secondItem="DGz-yn-DvQ" secondAttribute="trailing" id="ex7-fe-PEF"/>
                                                     <constraint firstItem="wx6-Hn-9a9" firstAttribute="top" secondItem="CAi-u5-gag" secondAttribute="top" constant="37" id="j9K-3x-P8W"/>
-                                                    <constraint firstItem="DGz-yn-DvQ" firstAttribute="top" secondItem="wx6-Hn-9a9" secondAttribute="bottom" constant="4" id="mdy-nd-fih"/>
+                                                    <constraint firstItem="DGz-yn-DvQ" firstAttribute="top" secondItem="wx6-Hn-9a9" secondAttribute="bottom" constant="3" id="mdy-nd-fih"/>
                                                     <constraint firstItem="9Wo-ml-SAC" firstAttribute="top" secondItem="CAi-u5-gag" secondAttribute="top" constant="2" id="p33-Bg-pxx"/>
                                                     <constraint firstItem="9Wo-ml-SAC" firstAttribute="top" secondItem="CAi-u5-gag" secondAttribute="top" constant="2" id="r0V-0c-oeF"/>
                                                     <constraint firstItem="wx6-Hn-9a9" firstAttribute="leading" secondItem="CAi-u5-gag" secondAttribute="leading" constant="6" id="uyb-w0-Y5A"/>

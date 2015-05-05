@@ -15,6 +15,7 @@
 		3A40479D1AE050F60016EC90 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A40479B1AE050F60016EC90 /* LaunchScreen.xib */; };
 		3A4047A91AE050F70016EC90 /* SharingPrototypeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4047A81AE050F70016EC90 /* SharingPrototypeTests.m */; };
 		4E3772101AF01E3B0093E6CF /* SeparatorLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E37720E1AF01E3B0093E6CF /* SeparatorLine.m */; };
+		4E3772161AF93B620093E6CF /* EmailShareGrowingTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3772151AF93B620093E6CF /* EmailShareGrowingTextView.m */; };
 		4EE57BA31AE5811B001461B7 /* EmailContactItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE57BA21AE5811B001461B7 /* EmailContactItem.m */; };
 		A9198D551D7BC1E0309CEDB9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 145139D015608A2FF720CBB1 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -46,6 +47,8 @@
 		3A4047A81AE050F70016EC90 /* SharingPrototypeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SharingPrototypeTests.m; sourceTree = "<group>"; };
 		4E37720E1AF01E3B0093E6CF /* SeparatorLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeparatorLine.m; sourceTree = "<group>"; };
 		4E37720F1AF01E3B0093E6CF /* SeparatorLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeparatorLine.h; sourceTree = "<group>"; };
+		4E3772141AF93B620093E6CF /* EmailShareGrowingTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailShareGrowingTextView.h; sourceTree = "<group>"; };
+		4E3772151AF93B620093E6CF /* EmailShareGrowingTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmailShareGrowingTextView.m; sourceTree = "<group>"; };
 		4EE57BA11AE5811B001461B7 /* EmailContactItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EmailContactItem.h; path = ../EmailContactItem.h; sourceTree = "<group>"; };
 		4EE57BA21AE5811B001461B7 /* EmailContactItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EmailContactItem.m; path = ../EmailContactItem.m; sourceTree = "<group>"; };
 		65689074A3BAFA52F9ABC474 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -100,6 +103,8 @@
 				3A4047911AE050F60016EC90 /* AppDelegate.m */,
 				3A4047931AE050F60016EC90 /* EmailShareViewController.h */,
 				3A4047941AE050F60016EC90 /* EmailShareViewController.m */,
+				4E3772141AF93B620093E6CF /* EmailShareGrowingTextView.h */,
+				4E3772151AF93B620093E6CF /* EmailShareGrowingTextView.m */,
 				3A4047961AE050F60016EC90 /* Main.storyboard */,
 				4E37720E1AF01E3B0093E6CF /* SeparatorLine.m */,
 				4E37720F1AF01E3B0093E6CF /* SeparatorLine.h */,
@@ -288,6 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E3772161AF93B620093E6CF /* EmailShareGrowingTextView.m in Sources */,
 				4EE57BA31AE5811B001461B7 /* EmailContactItem.m in Sources */,
 				3A4047951AE050F60016EC90 /* EmailShareViewController.m in Sources */,
 				3A4047921AE050F60016EC90 /* AppDelegate.m in Sources */,

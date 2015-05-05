@@ -75,13 +75,13 @@ NSString *commentsCharacterCountLabelTemplate = @"Maximun %i characters (%i rema
     self.contactsAreDisplayed = false;
     
     self.commentsTextView.minNumberOfLines = 1;
-    self.commentsTextView.maxNumberOfLines = 10;
+    self.commentsTextView.maxNumberOfLines = 20;
     self.commentsTextView.placeholder = @"Comments?";
     self.commentsTextView.animateHeightChange = false;
     self.commentsTextView.delegate = self;
     self.characterCountLabelView.text = [NSString stringWithFormat:commentsCharacterCountLabelTemplate, kMaxCommentsCharacters, kMaxCommentsCharacters];
     
-    UIActivityIndicatorView *webViewLoadIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    UIActivityIndicatorView *webViewLoadIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     webViewLoadIndicator.color = [UIColor blackColor];
     [webViewLoadIndicator setCenter:self.view.center];
     self.webViewActivityIndicator = webViewLoadIndicator;
@@ -89,6 +89,7 @@ NSString *commentsCharacterCountLabelTemplate = @"Maximun %i characters (%i rema
     
     self.previewWebView.delegate = self;
     NSURL *URL = [NSURL URLWithString:@"http://xvia-dev.s3.amazonaws.com/share/test/content/Preview.html"];
+//    NSURL *URL = [NSURL URLWithString:@"http://xvia-dev.s3.amazonaws.com/share/test/content/Pie_Chart_Preview.html"];
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     [self.previewWebView loadRequest:request];
     
@@ -127,6 +128,15 @@ NSString *commentsCharacterCountLabelTemplate = @"Maximun %i characters (%i rema
     [super viewWillDisappear:animated];
     
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+-(void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator{
+    
+}
+
+-(void)viewDidLayoutSubviews{
+    
+    
 }
 
 #pragma mark - Helper Methods
