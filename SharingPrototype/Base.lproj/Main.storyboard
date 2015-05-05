@@ -86,7 +86,7 @@
                                                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DGz-yn-DvQ" userLabel="Comments Text View" customClass="EmailShareGrowingTextView">
-                                                        <rect key="frame" x="0.0" y="45" width="375" height="31"/>
+                                                        <rect key="frame" x="3" y="45" width="375" height="31"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="31" id="Wki-4k-kNK"/>
                                                         </constraints>
@@ -160,7 +160,7 @@
                                                     <constraint firstAttribute="bottom" secondItem="9Wo-ml-SAC" secondAttribute="bottom" constant="535" id="EcZ-Lr-Orv"/>
                                                     <constraint firstItem="tn9-va-xio" firstAttribute="top" secondItem="CAi-u5-gag" secondAttribute="top" constant="5" id="Hs4-b1-HgV"/>
                                                     <constraint firstItem="9Wo-ml-SAC" firstAttribute="trailing" secondItem="CAi-u5-gag" secondAttribute="trailing" id="I5B-qm-v9I"/>
-                                                    <constraint firstItem="DGz-yn-DvQ" firstAttribute="leading" secondItem="CAi-u5-gag" secondAttribute="leading" id="LMv-Ts-mQS"/>
+                                                    <constraint firstItem="DGz-yn-DvQ" firstAttribute="leading" secondItem="CAi-u5-gag" secondAttribute="leading" constant="3" id="LMv-Ts-mQS"/>
                                                     <constraint firstItem="wx6-Hn-9a9" firstAttribute="top" secondItem="9Wo-ml-SAC" secondAttribute="bottom" constant="34" id="LRE-hX-W6e"/>
                                                     <constraint firstItem="Kkw-aT-EVw" firstAttribute="top" secondItem="DGz-yn-DvQ" secondAttribute="bottom" id="LRn-Ft-PwR"/>
                                                     <constraint firstAttribute="bottom" secondItem="wx6-Hn-9a9" secondAttribute="bottom" constant="500" id="PFn-CH-2zV"/>
