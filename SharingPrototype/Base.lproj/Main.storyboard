@@ -50,24 +50,36 @@
                                                         <rect key="frame" x="0.0" y="5" width="375" height="35"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nul-hv-Xb3" userLabel="Subject Label">
-                                                                <rect key="frame" x="8" y="10" width="0.0" height="0.0"/>
+                                                                <rect key="frame" x="8" y="15" width="0.0" height="0.0"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5fE-mX-dCD" userLabel="Subject Text">
-                                                                <rect key="frame" x="16" y="12" width="351" height="17"/>
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5fE-mX-dCD" userLabel="Subject Text">
+                                                                <rect key="frame" x="16" y="7" width="351" height="17"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                         </subviews>
                                                         <constraints>
+                                                            <constraint firstAttribute="centerY" secondItem="nul-hv-Xb3" secondAttribute="centerY" id="9e6-TM-0fK"/>
                                                             <constraint firstItem="nul-hv-Xb3" firstAttribute="leading" secondItem="tn9-va-xio" secondAttribute="leading" constant="8" id="9mh-Al-ohe"/>
+                                                            <constraint firstItem="nul-hv-Xb3" firstAttribute="baseline" secondItem="5fE-mX-dCD" secondAttribute="baseline" id="DoN-Sg-ybl"/>
+                                                            <constraint firstItem="nul-hv-Xb3" firstAttribute="bottom" secondItem="5fE-mX-dCD" secondAttribute="bottom" id="EiW-Kz-9Es"/>
                                                             <constraint firstItem="nul-hv-Xb3" firstAttribute="top" secondItem="tn9-va-xio" secondAttribute="top" constant="10" id="GTA-Hr-aRv"/>
+                                                            <constraint firstAttribute="centerY" secondItem="5fE-mX-dCD" secondAttribute="centerY" id="hry-en-B5X"/>
                                                             <constraint firstAttribute="trailing" secondItem="5fE-mX-dCD" secondAttribute="trailing" constant="8" id="lGb-qp-FaF"/>
                                                             <constraint firstItem="5fE-mX-dCD" firstAttribute="leading" secondItem="nul-hv-Xb3" secondAttribute="trailing" constant="8" id="rJL-vI-PCm"/>
                                                             <constraint firstItem="5fE-mX-dCD" firstAttribute="top" secondItem="tn9-va-xio" secondAttribute="top" constant="12" id="sPc-Zt-4pb"/>
                                                         </constraints>
+                                                        <variation key="default">
+                                                            <mask key="constraints">
+                                                                <exclude reference="EiW-Kz-9Es"/>
+                                                                <exclude reference="GTA-Hr-aRv"/>
+                                                                <exclude reference="hry-en-B5X"/>
+                                                                <exclude reference="sPc-Zt-4pb"/>
+                                                            </mask>
+                                                        </variation>
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wx6-Hn-9a9" userLabel="Separator Line 2" customClass="SeparatorLine">
                                                         <rect key="frame" x="6" y="42" width="369" height="1"/>

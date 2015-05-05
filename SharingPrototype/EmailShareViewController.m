@@ -75,7 +75,7 @@ NSString *commentsCharacterCountLabelTemplate = @"Maximun %i characters (%i rema
     self.contactsAreDisplayed = false;
     
     self.commentsTextView.minNumberOfLines = 1;
-    self.commentsTextView.maxNumberOfLines = 20;
+    self.commentsTextView.maxNumberOfLines = 1000;
     self.commentsTextView.placeholder = @"Comments?";
     self.commentsTextView.animateHeightChange = false;
     self.commentsTextView.delegate = self;
