@@ -20,6 +20,8 @@
 @property (nonatomic) NSInteger selectedCount;
 @property (nonatomic, assign) BOOL contactsAreDisplayed;
 @property (nonatomic, strong)UIActivityIndicatorView *webViewActivityIndicator;
+@property (nonatomic, assign) double commentsContentHeight;
+@property (nonatomic, assign) double contactsContentHeight;
 
 - (NSPredicate *)newFilteringPredicateWithText:(NSString *) text;
 - (void) didChangeSelectedItems;
@@ -33,6 +35,7 @@
 
 NSString *EmailShareViewCellReuseID = @"EmailShareViewCell";
 NSString *commentsCharacterCountLabelTemplate = @"Maximun %i characters (%i remaining)";
+
 
 #pragma mark - Public properties
 
@@ -89,6 +92,9 @@ NSString *commentsCharacterCountLabelTemplate = @"Maximun %i characters (%i rema
     self.webViewActivityIndicator = webViewLoadIndicator;
     [self.previewWebView addSubview:self.webViewActivityIndicator];
     
+    _contactsContentHeight = _contactPickerView.bounds.size.height;
+    _commentsContentHeight = _commentsTextView.bounds.size.height;
+    
     self.previewWebView.delegate = self;
     NSURL *URL = [NSURL URLWithString:@"http://xvia-dev.s3.amazonaws.com/share/test/content/Preview.html"];
 //    NSURL *URL = [NSURL URLWithString:@"http://xvia-dev.s3.amazonaws.com/share/test/content/Pie_Chart_Preview.html"];
@@ -137,8 +143,7 @@ NSString *commentsCharacterCountLabelTemplate = @"Maximun %i characters (%i rema
 }
 
 -(void)viewDidLayoutSubviews{
-    
-    
+
 }
 
 #pragma mark - Helper Methods
@@ -324,6 +329,10 @@ NSString *commentsCharacterCountLabelTemplate = @"Maximun %i characters (%i rema
     CGRect previewContentFrame = _previewContentView.frame;
     previewContentFrame.origin.y = _commentsTextView.frame.origin.y + height +2;
     _previewContentView.frame = previewContentFrame;
+    
+    [self resizeScrollableContentForSubView:growingTextView withPreviousContentHeight:_commentsContentHeight];
+    _commentsContentHeight = growingTextView.frame.size.height;
+    NSLog(@"Resize growing text view, growing text frame size is %f", growingTextView.frame.size.height);
 }
 
 - (BOOL)growingTextView:(HPGrowingTextView *)growingTextView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
@@ -367,6 +376,7 @@ NSString *commentsCharacterCountLabelTemplate = @"Maximun %i characters (%i rema
             self.tableView.hidden = NO;
             self.contactsAreDisplayed = true;
         }
+
     }
     
     self.filteredContacts = [self getFilteredContacts:textViewText];
@@ -403,14 +413,22 @@ NSString *commentsCharacterCountLabelTemplate = @"Maximun %i characters (%i rema
     self.tableView.frame = frame;
     self.scrollableContentContainerView.frame = scrollableContentContainerFrame;
     
+    [self resizeScrollableContentForSubView:contactPickerView withPreviousContentHeight:_contactsContentHeight];
+    _contactsContentHeight = contactPickerView.frame.size.height;
     
+    NSLog(@"Resize contacts text view, contacts text frame size is %f", contactPickerView.frame.size.height);
+}
+
+- (void) resizeScrollableContentForSubView:(UIView *)subView withPreviousContentHeight:(double)contentHeight {
+    double changeDelta = subView.frame.size.height - contentHeight;
+    CGSize tempSize = _scrollView.contentSize;
+    tempSize.height += changeDelta;
+    [_scrollView setContentSize:tempSize];
 }
 
 - (void)contactPickerDidRemoveContact:(id)contact {
     [self.privateSelectedContacts removeObject:contact];
     
-//    NSInteger index = [self.contacts indexOfObject:contact];
-//    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0]];
     [self didChangeSelectedItems];
 }
 
