@@ -18,8 +18,8 @@
 @property (nonatomic, strong) NSMutableArray *privateSelectedContacts;
 @property (nonatomic, strong) NSArray *filteredContacts;
 @property (nonatomic) NSInteger selectedCount;
-@property (nonatomic, assign) BOOL contactsAreDisplayed;
 @property (nonatomic, strong)UIActivityIndicatorView *webViewActivityIndicator;
+@property (nonatomic, assign) BOOL contactsAreDisplayed;
 @property (nonatomic, assign) double commentsContentHeight;
 @property (nonatomic, assign) double contactsContentHeight;
 
@@ -78,7 +78,7 @@ NSString *commentsCharacterCountLabelTemplate = @"Maximun %i characters (%i rema
     self.contactsAreDisplayed = false;
     
     self.commentsTextView.minNumberOfLines = 1;
-    self.commentsTextView.maxNumberOfLines = 1000;
+    self.commentsTextView.maxNumberOfLines = kMaxCommentsCharacters * 2;
     self.commentsTextView.placeholder = @"Comments?";
     self.commentsTextView.animateHeightChange = false;
     self.commentsTextView.delegate = self;
@@ -259,6 +259,14 @@ NSString *commentsCharacterCountLabelTemplate = @"Maximun %i characters (%i rema
     return [NSPredicate predicateWithFormat:@"self.firstName contains[cd] %@ || self.lastName contains[cd] %@ || self.emailAddress CONTAINS[c] %@", text, text, text];
 }
 
+
+- (void) resizeScrollableContentForSubView:(UIView *)subView withPreviousContentHeight:(double)contentHeight {
+    double changeDelta = subView.frame.size.height - contentHeight;
+    CGSize tempSize = _scrollView.contentSize;
+    tempSize.height += changeDelta;
+    [_scrollView setContentSize:tempSize];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -268,7 +276,7 @@ NSString *commentsCharacterCountLabelTemplate = @"Maximun %i characters (%i rema
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return [self.filteredContacts count];
+    return self.filteredContacts.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -332,7 +340,6 @@ NSString *commentsCharacterCountLabelTemplate = @"Maximun %i characters (%i rema
     
     [self resizeScrollableContentForSubView:growingTextView withPreviousContentHeight:_commentsContentHeight];
     _commentsContentHeight = growingTextView.frame.size.height;
-    NSLog(@"Resize growing text view, growing text frame size is %f", growingTextView.frame.size.height);
 }
 
 - (BOOL)growingTextView:(HPGrowingTextView *)growingTextView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
@@ -383,7 +390,6 @@ NSString *commentsCharacterCountLabelTemplate = @"Maximun %i characters (%i rema
     
     if (self.filteredContacts.count == 0) {
         self.contactsAreDisplayed = false;
-        [self.tableView removeFromSuperview];
     }
     
     [self.tableView reloadData];
@@ -416,14 +422,6 @@ NSString *commentsCharacterCountLabelTemplate = @"Maximun %i characters (%i rema
     [self resizeScrollableContentForSubView:contactPickerView withPreviousContentHeight:_contactsContentHeight];
     _contactsContentHeight = contactPickerView.frame.size.height;
     
-    NSLog(@"Resize contacts text view, contacts text frame size is %f", contactPickerView.frame.size.height);
-}
-
-- (void) resizeScrollableContentForSubView:(UIView *)subView withPreviousContentHeight:(double)contentHeight {
-    double changeDelta = subView.frame.size.height - contentHeight;
-    CGSize tempSize = _scrollView.contentSize;
-    tempSize.height += changeDelta;
-    [_scrollView setContentSize:tempSize];
 }
 
 - (void)contactPickerDidRemoveContact:(id)contact {
