@@ -141,9 +141,9 @@ NSString *commentsCharacterCountLabelTemplate = @"Maximun %i characters (%i rema
 -(void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator{
     [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context)
      {
-        CGSize contentViewSize = self.contentView.frame.size;
-        CGSize scrollViewContentSize = _scrollView.contentSize;
-        scrollViewContentSize.height = contentViewSize.height + _contactsContentHeight + _contactsContentHeight;
+         CGSize contentViewSize = self.contentView.frame.size;
+         CGSize scrollViewContentSize = _scrollView.contentSize;
+         scrollViewContentSize.height = contentViewSize.height + _contactsContentHeight + _commentsContentHeight;
         [_scrollView setContentSize:scrollViewContentSize];
      } completion:^(id<UIViewControllerTransitionCoordinatorContext> context)
      {
@@ -272,11 +272,9 @@ NSString *commentsCharacterCountLabelTemplate = @"Maximun %i characters (%i rema
 
 - (void) resizeScrollableContentForSubView:(UIView *)subView withPreviousContentHeight:(double)contentHeight {
     double changeDelta = subView.frame.size.height - contentHeight;
-    if (changeDelta != 0.0) {
-        CGSize tempSize = _scrollView.contentSize;
-        tempSize.height += changeDelta;
-        [_scrollView setContentSize:tempSize];
-    }
+    CGSize tempSize = _scrollView.contentSize;
+    tempSize.height += changeDelta;
+    [_scrollView setContentSize:tempSize];
 }
 
 #pragma mark - Table view data source
