@@ -139,7 +139,21 @@ NSString *commentsCharacterCountLabelTemplate = @"Maximun %i characters (%i rema
 }
 
 -(void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator{
+    [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context)
+     {
+         UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
+         if (orientation == UIInterfaceOrientationLandscapeLeft || orientation == UIInterfaceOrientationLandscapeRight) {
+             CGSize contentViewSize = self.contentView.frame.size;
+             CGSize scrollViewContentSize = _scrollView.contentSize;
+             scrollViewContentSize.height = contentViewSize.height + _contactsContentHeight + _contactsContentHeight;
+             [_scrollView setContentSize:scrollViewContentSize];
+         }
+         // do whatever
+     } completion:^(id<UIViewControllerTransitionCoordinatorContext> context)
+     {
+     }];
     
+    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
 }
 
 -(void)viewDidLayoutSubviews{
